@@ -1,0 +1,6 @@
+Dette repo indeholder en række præsentationer ifm astronomiundervisningen på Vibenhus Gymnasium.
+
+Indtil videre er der følgende præsentationer:
+
+* Introduktion til astronomi
+- [[https://htmlpreview.github.io/?./01_Intro_til_astro/01_Intro_til_astro.html]]

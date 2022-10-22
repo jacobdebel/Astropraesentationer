@@ -1,0 +1,653 @@
+#+title: Er der liv derude?
+#+subtitle: Astronomi C
+#+author:  Vibenshus Gymnasium
+#+date: 
+# Themes: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
+#+reveal_theme: black
+#+reveal_title_slide: <h2>%t</h2><h3>%s</h3><h4>%a</h4><h4>%d</h4>
+#+reveal_title_slide_background: ./img/exoplanets_background.jpg
+#+reveal_default_slide_background: 
+#+reveal_extra_options: slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true
+# #+reveal_extra_attr: style="color:red"
+#+options: toc:nil num:nil tags:nil timestamp:nil ^:{}
+
+
+* Er der liv derude?
+** Hvad tror I?
+#+attr_reveal: :frag (appear)
+- Er vi kun en civilisation af mange?
+- Er vi de /eneste/... Universets supercivilisation!?
+
+** To ekstremer
+- Er vi kun en civilisation af mange? *Frank Drake*
+- Er vi de /eneste/... Universets supercivilisation!? *Enrico Fermi*
+
+** Frank Drake
+
+#+DOWNLOADED: https://www.sciencefriday.com/wp-content/uploads/2016/07/fdd1-2.jpg @ 2020-04-29 14:46:18
+#+attr_html: :width 400px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_14-46-18_fdd1-2.jpg]]
+
+#+reveal: split
+
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+Det er mange supercivilisationer i Mælkevejen, der er bare for langt imellem dem, til at de/vi kan kommunikere med dem.
+#+end_quote
+Drake-ligningen:
+$$N=R \cdot f_p\cdot n_e \cdot f_l\cdot f_i\cdot f_c \cdot L$$
+- $N$: antal civilisationer i Mælkevejen, vi kan kommunikere med.
+- $R$: antal af sollignende stjerner, der dannes pr. år i Mælkevejen.
+- $f_p$: brøkdel af stjerner med planeter.
+- $n_e$: antal jordlignende planeter i et typisk solsystem.
+- $f_l$: brøkdel af disse planeter hvorpå der opstår liv.
+- $f_i$: brøkdel af de planeter med liv, som udvikler sig til intelligent liv.
+- $f_c$: brøkdel der udvikler en teknisk civilisation, som kan kommunikere.
+- $L$: gennemsnitslevetiden for en teknisk civilisation.
+  
+Se mere i tema 15.4 s. 271 i Det Levende Univers.
+
+** Enrico Fermi
+#+DOWNLOADED: https://teachvaluesnow.org/ebay/8x10%20%20Enrico%20Fermi%202.jpg @ 2020-04-29 14:47:29
+#+attr_html: :width 400px
+#+attr_latex: :width 7cm
+[[file:img/Enrico_Fermi.jpg]]
+
+#+reveal: split
+Fermiparadokset
+#+begin_quote
+Hvor bliver de af?
+#+end_quote
+- Med vores egen ekspansionsiver/hastighed burde vi kunne kolonisere hele Mælkevejen indenfor 5 millioner år.
+- Så hvor bliver alle andre tilsvarende civilisationer af?
+  
+** Fermiparadokset
+#+begin_export html
+<iframe width="600" height="350" src="https://www.youtube.com/embed/sNhhvQGsMEc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+Direkte link: [[https://youtu.be/sNhhvQGsMEc]]
+
+#+reveal: split
+Så, skal vi tro på Drake... 
+#+attr_reveal: :frag (appear)
+eller Fermi?
+#+attr_reveal: :frag (appear)
+- Lad os starte med (at prøve) at forstå vores eget solsystem.
+- Her ved vi trods alt, at der er (intelligent) liv.
+
+* Forståelse af vores eget solsystem
+** Dannelse
+#+begin_export html
+<iframe width="600" height="350" src="https://www.youtube.com/embed/8Rg9v3J0IiU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+Direkte link: [[https://youtu.be/8Rg9v3J0IiU]]
+
+** Populær forklaring
+
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+DOWNLOADED: https://i.ytimg.com/vi/Z8CzVUeCTjc/hqdefault.jpg @ 2020-04-27 09:52:38
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-27_09-52-38_hqdefault.jpg]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+- Overalt "regner" det med sten- og metalpartikler. Disse samler sig som "snebolde"
+- Tæt på Solen er det for varmt til at det kan regne med vand.
+- Gasser (inkl vanddamp) blæses væk fra Solen.
+- Ved lavt tryk desublimerer gasser til fast form (flydende form springes over).
+- Tilpas langt væk fra Solen sner det også med vand. 
+- Overgangen sker ved frost/is/sne-grænsen/linjen.
+#+reveal_html: </div>
+
+** Lidt mere info
+
+#+begin_export html
+<iframe width="600" height="350" src="https://www.youtube.com/embed/Z8CzVUeCTjc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+
+Direkte link: [[https://youtu.be/Z8CzVUeCTjc]]
+
+** Planetdannelse
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div class="column" style="float:left; width: 30%">
+#+DOWNLOADED: screenshot @ 2020-04-29 09:53:13
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_09-53-13_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2020-04-29 09:53:52
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_09-53-52_screenshot.png]]
+
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 70%">
+#+attr_reveal: :frag (appear)
+- Tæt på Solen er kun de små tætte (høj densitet) planeter. (Merkur, Venus, Jorden og Mars). For varmt til, at det kan sne med vand (vand er et af de mest almindelige stoffer i universet).
+- Det er for varmt og planeterne er for små til at kunne holde på brint og helium.
+- På den anden side af frostlinjen sner det også med vand. Der dannes isplaneter. Disse kan blive op til 10 gange jordens masse.
+- Hvis brint- og heliumgassen stadig er til stede, vil de store isplaneter tiltrække gassen og danne de store gasplaneter.
+- I vores tilfælde Jupiter, Saturn (, Uranus og Neptun).
+#+reveal_html: </div>
+
+** Drake eller Fermi?
+- Giver dette anledning til at tro, at dette også er sket i andre planetsystemer?
+
+* Men hvor kommer vandet på Jorden så fra?
+** Det store bombardement (Late Heavy Bombardment)
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+DOWNLOADED: https://www.universetoday.com/wp-content/uploads/2011/10/comet-bombardment.jpg @ 2020-04-29 10:17:00
+#+attr_html: :height 250px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_10-17-00_comet-bombardment.jpg]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+DOWNLOADED: https://i.pinimg.com/originals/28/91/04/2891042375c0cb257535ec3ad8d9350e.jpg @ 2020-04-29 10:19:28
+#+attr_html: :height 250px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_10-19-28_2891042375c0cb257535ec3ad8d9350e.jpg]]
+#+reveal_html: </div>
+
+** NICE-modellen
+#+reveal_html: <div style="font-size: 50%;">
+#+DOWNLOADED: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Lhborbits.png/1024px-Lhborbits.png @ 2020-04-29 10:12:28
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_10-12-28_1024px-Lhborbits.png]]
+
+#+reveal_html: <div class="column" style="float:left; width: 30%">
+- Jupiter grøn
+- Saturn orange
+- Neptun mørkeblå
+- Uranus lyseblå
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 70%">
+#+attr_reveal: :frag (appear)
+- Jupiter og Saturn glider langsomt indad mod Solen.
+- Jupiter og Saturn rammer en 2:1 resonans. Jupiter når præcis rundt om Solen 2 gange mens Saturn når præcis 1 gang rundt.
+- Dette forstyrer solsystemet voldsomt.
+- Sender Neptun og Uranus udad i solsystemet, og de bytter bane.
+- Asteroider(sten og metal) og kometer (sten, metal og IS) sendes i *tilfældige* retninger.
+#+reveal_html: </div>
+
+** Resultatet
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+DOWNLOADED: https://4.bp.blogspot.com/_HkkJKGa-ZX8/TQGEW8cFCpI/AAAAAAAAAJw/63_ILQOk144/s640/formation+of+Earth.jpg @ 2020-04-29 10:36:06
+#+attr_html: :width 250px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_10-36-06_formation+of+Earth.jpg]]
+
+#+DOWNLOADED: https://www.syfy.com/sites/syfy/files/styles/1200x680/public/lro_boguslawskye.jpg @ 2020-04-29 10:36:46
+#+attr_html: :width 250px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_10-36-46_lro_boguslawskye.jpg]]
+- Der falder 2000 tons kosmisk materiale på Månen og Jorden pr. m^2.
+- Mængden af vand på Jorden stemmer overens med antallet af faldne kometer!
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+DOWNLOADED: https://i.pinimg.com/originals/28/91/04/2891042375c0cb257535ec3ad8d9350e.jpg @ 2020-04-29 10:19:28
+#+attr_html: :width 300px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_10-19-28_2891042375c0cb257535ec3ad8d9350e.jpg]]
+- De kometer, som ikke slynges ind ad og rammer de inderste planeter og Solen, slynges ud ad og danner Oort-skyen.
+#+reveal_html: </div>
+** Murchison meteoritten
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 40%">
+#+DOWNLOADED: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Murchison_meteorite.jpg/398px-Murchison_meteorite.jpg @ 2020-04-29 14:12:18
+#+attr_html: :width 300px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_14-12-18_398px-Murchison_meteorite.jpg]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 60%">
+- *Murchison-meteoritten* faldt i Australien i 1969.
+- menes at være rester af en komet. (Det diskuteres stadig, om det er en asteroide eller en komet).
+- Indeholder 11 af de 20 aminosyrer, der opbygger proteiner, som livet her på Jorden på består af.
+- Ligeledes er der fundet 3 af de 5 nukleotider (Bogstaverne i RNA og DNA) som beskriver arvemassen for livet på Jorden.
+#+reveal_html: </div>
+
+** Drake eller Fermi?
+- Livets byggesten (aminosyrer og nukleotider) og mediet (vand), det skal udvikle sig i, "regner" åbenbart ned over planeterne.
+- Vil det også være gældende for andre planetsystemer?
+  
+** Kun én måde at finde ud af det på
+#+attr_reveal: :frag (appear)
+Vi skal studere *exoplaneter*!
+
+* Exoplaneter
+#+DOWNLOADED: screenshot @ 2020-04-29 14:52:29
+#+attr_html: :width 500px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_14-52-29_screenshot.png]]
+
+** Exoplaneter
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+- En exoplanet er en planet, som bevæger sig om en anden stjerne end Solen.
+- Pr. d. 24. april 2020 er der 4255 bekræftede exoplaneter i 3146 planetsystemer hvor af 695 af systemerne har mere end en planet. (Kilde:https://en.wikipedia.org/wiki/Exoplanet)
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_html: :width 300px
+[[file:img/venus-transit.en.jpg]]
+#+reveal_html: </div>
+
+** Observationsmetoder
+- Formørkelsesmetoden
+- Radialhastigheder
+- Gravitationslinser /mikrolinsemetoden
+
+** Formørkelsesmetoden
+#+attr_html: :width 400px
+[[file:img/transit.jpg]]
+
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+- Fordele?
+- Ulemper?
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Arealet og dermed lysstyrken fra stjernen nedsættes med brøkdelen
+$$\left( \frac{d}{D} \right)^2$$
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Formørkelsens varighed afhænger af, hvordan planeten bevæger sig hen foran stjernen set i forhold til os.
+
+#+DOWNLOADED: screenshot @ 2020-04-29 19:50:44
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_19-50-44_screenshot.png]]
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Vi ser kun formørkelser for systemer i den rette vinkel set ift os. Følgende skal være opfyldt.
+$$r\cdot \sin \left( \phi \right) < R$$
+
+#+DOWNLOADED: screenshot @ 2020-04-29 19:54:55
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_19-54-55_screenshot.png]]
+
+
+** Kepler-satellitten
+#+attr_html: :width 400px
+[[file:img/stellarium-000.png]]
+#+DOWNLOADED: https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Kepler_Space_Telescope_spacecraft_model_2.png/300px-Kepler_Space_Telescope_spacecraft_model_2.png @ 2020-04-29 19:22:55
+#+attr_html: :width 200px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_19-22-55_300px-Kepler_Space_Telescope_spacecraft_model_2.png]]
+
+** Opgave                                                   :opgave_8_8_dlu:
+#+reveal_html: <div style="font-size: 60%;">
+Jorden og Jupiter som exoplaneter
+
+Forestil jer, at I observere vort solsystem fra en planet i et andet solsystem. Det passer lige med, at I kan se Solen blive formørket af Jorden.
+
+1. *Beregn, hvor land tid Jorden vil formørke Solen.* Jorden bevæger sig mig 30 km/s i sin bane om Solen.
+
+2. Pga. formørkelsen er Solens lysstyrke nu $L$ i stedet for den sædvanlige værdi $L_{\odot}$.
+
+   *Beregn $\frac{L}{L_{\odot}}$ og ændringen i Solens absolutte størrelsesklasse $M$.*
+   
+3. *Hvor mange grader må Jordens baneplan højst hælde ift. synslinjen, for at I kan se formørkelsen?*
+
+4. Gentag beregningerne for Jupiter.
+   
+** Facit
+#+reveal_html: <div style="font-size: 60%;">
+1. Formørkelsestid 12.88 timer
+2. $\frac{L}{L_{\odot}}=0.9999$ og $M-M_{\odot} = 0.0001$
+3. $\phi_{Jord} < 0.27^{\circ}$
+4. For Jupiter: Formørkelsestid 29.5 timer, $\frac{L}{L_{\odot}} = 0.9894$, $M-M_{\odot} = 0.0114$, $\phi_{Jupiter}< 0.051^{\circ}$
+** Hints til 1
+$$t=\frac{D_{\odot}}{v_{Jord}}$$
+** Hints til 2
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+$$\frac{L}{L_{\odot}} = 1 - \left(\frac{d_{Jord}}{D_{\odot}}\right)^2 = 1 - \left( \frac{R_{Jord}}{R_{\odot}} \right)^2$$
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+Slå op bagerst i DLU
+
+#+DOWNLOADED: screenshot @ 2020-04-29 20:59:02
+#+attr_html: :width 200px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_20-59-02_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2020-04-29 20:59:16
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_20-59-16_screenshot.png]]
+#+reveal_html: </div>
+
+** Hints til 3
+$$M - M_{\odot} = -2.5 \cdot \log \left( \frac{L}{L_{\odot}} \right)$$
+Kan findes i kompendiet om stjerner fra tidligere.
+
+** Hints til 4
+#+reveal_html: <div style="font-size: 60%;">
+\begin{align*}
+r \cdot \sin \left( \phi \right) < R \to \\
+\boxed{\phi < \sin^{-1}\left( \frac{R}{r} \right)}
+\end{align*}
+- $r$ er baneradius.
+- $R$ er stjernens radius.
+  
+Slå Jordens baneradius op i bagerst i DLU.
+
+#+DOWNLOADED: screenshot @ 2020-04-29 21:04:47
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_21-04-47_screenshot.png]]
+
+** Mine beregninger
+#+reveal_html: <div style="font-size: 50%;">
+Jorden:
+1. $t = \frac{D_{\odot}}{v}=\frac{2\cdot 696000 \,km}{30 \, km/s} = 46400 \,s = 12.89\,h$
+2. $\frac{L}{L_{\odot}}=1 - \left( \frac{R_{Jord}}{R_{\odot}} \right)^2 = 1 - \left( \frac{6378 \,km}{696000 \,km} \right)^2 = 0.9999$
+3. $M-M_{\odot} = -2.5\cdot \log \left( \frac{L}{L_{\odot}} \right) = -2.5 \cdot \log \left( 0.9999 \right) = 0.0001$
+4. $\phi_{Jord} < \sin^{-1}\left( \frac{R_{\odot}}{r_{Jord}} \right) = \sin^{-1}\left( \frac{696000\,km}{1.5\cdot 10^8 \,km} \right) = 0.27^{\circ}$
+Jupiter:
+1. $t = \frac{D_{\odot}}{v}=\frac{2\cdot 696000 \,km}{13.1 \, km/s} = 106260 \,s = 29.5\,h$
+2. $\frac{L}{L_{\odot}}=1 - \left( \frac{R_{Jupiter}}{R_{\odot}} \right)^2 = 1 - \left( \frac{71492 \,km}{696000 \,km} \right)^2 = 0.9894$
+3. $M-M_{\odot} = -2.5\cdot \log \left( \frac{L}{L_{\odot}} \right) = -2.5 \cdot \log \left( 0.9894 \right) = 0.0114$
+4. $\phi_{Jupiter} < \sin^{-1}\left( \frac{R_{\odot}}{r_{Jupiter}} \right) = \sin^{-1}\left( \frac{696000\,km}{5.2028 \cdot 1.5\cdot 10^8 \,km} \right) = 0.051^{\circ}$
+
+** Hvilke planeter er nemmest at observere vha transitmetoden?
+#+attr_reveal: :frag (appear)
+- Store planeter tæt på sin stjerne.
+
+** Radialhastighed
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+
+#+DOWNLOADED: screenshot @ 2020-04-29 21:09:30
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_21-09-30_screenshot.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+
+#+DOWNLOADED: screenshot @ 2020-04-29 21:10:00
+#+attr_html: :width 300px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_21-10-00_screenshot.png]]
+
+- Perioden svarer til planetens omløbstid.
+- *Se mere i tema 8.1 s. 139 i DLU.*
+#+reveal_html: </div>
+
+** Mikrolinsemetoden
+
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+DOWNLOADED: https://upload.wikimedia.org/wikipedia/commons/d/d7/Gravitational_micro_rev.jpg @ 2020-04-29 19:16:32
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_19-16-32_Gravitational_micro_rev.jpg]]
+
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+DOWNLOADED: screenshot @ 2020-04-29 19:17:42
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_19-17-42_screenshot.png]]
+#+reveal_html: </div>
+
+
+** SONG-teleskopet
+
+#+DOWNLOADED: https://www.nbi.ku.dk/Nyheder/nyheder_14/nyt-dansk-teleskop-til-forskning-i-stjerner-og-jordlignende-exo-planeter/SONG_panorama_teide_medium1280.jpg @ 2020-04-29 17:26:53
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2020-04-29_17-26-53_SONG_panorama_teide_medium1280.jpg]]
+
+#+reveal_html: <div style="font-size: 60%;">
+- Dansk teleskop på Tenerife.
+- Samarbejde mellem Aarhus Universitet og Københavns Universitet.
+- Fuldautomatiseret.
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 50%;">
+#+begin_quote
+SONG was conceived with two primary scientific goals in mind:
+
+- To study the internal structure of stars at a level to what can be done for the Sun when it is observed as a distant star using asteroseismology as a tool.
+- To search for and characterize planets in orbit around other stars using both gravitational microlensing observations, transit photometry and radial velocity measurements.
+
+#+end_quote
+Kilde: [[https://phys.au.dk/song/research-and-facilities/science-with-song/]]
+
+** Ligner exoplanetsystemerne så vores Solsystem?
+#+attr_reveal: :frag (appear)
+- Nej slet ikke!!!
+- Kepler-satellitten fandt en masse *Hot Jupiters*
+  - Store gasplaneter *tæt* på sin stjerne.
+  - (Også de nemmeste at finde observere)
+  - Modellen for vores solsystem kan ikke forklare dem.
+- Mangler de *kolde gasgiganter* for at kunne skabe de store bombardementer.
+
+** Drake eller Fermi?
+- Mere eller mindre liv?
+    
+** Efter Kepler 
+#+DOWNLOADED: https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fstartswithabang%2Ffiles%2F2018%2F12%2Flike-earth.jpg @ 2020-04-29 22:16:39
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/exoplanets_forbes.jpg]]
+#+reveal_html: <div style="font-size: 60%;">
+Kilde: [[https://www.forbes.com/sites/startswithabang/2019/04/23/at-last-scientists-have-found-the-galaxys-missing-exoplanets-cold-gas-giants/]]
+- Nu er astronomerne i stand til at observere de kolde gasgiganter.
+- Spørgsmålet er blot, om der er nok af dem i hvert planetsystem til at skabe de voldsomme forstyrelser (2:1 resonans og planetbaneombytning).
+
+** Drake eller Fermi?
+- Mere eller mindre liv?
+
+** Okay, men kan man så bo der?
+#+attr_reveal: :frag (appear)
+Astronomerne har indført begrebet
+#+attr_reveal: :frag (appear)
+- Den beboelige zone
+
+** Den beboelige zone
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 60%">
+- Ca. samme flux som fra Solen på Jorden $F_{\odot}=1360 W/m^2$
+- $1200 W/m^2 < F < 1500 W/m^2$
+- $F=\frac{L}{4 \cdot \pi \cdot r^2} \to \boxed{r=\sqrt{\frac{L}{4 \cdot \pi \cdot F}}}$
+- For $L=L_{\odot}$ bliver bredden 
+  $$0.96 \,AE < r < 1.07 \, AE$$
+- For $L=k\cdot L_{\odot}$ bliver bredden 
+  $$\sqrt{k}\cdot 0.96 \,AE < r < \sqrt{k} \cdot 1.07 \, AE$$
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 40%">
+#+attr_html: :width 300px
+[[file:img/beboelig_zone2.png]]
+#+reveal_html: </div>
+
+** Opgave: Beboelige zoner                                 :opgave_15_2_dlu:
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+1. Beregn den beboelige zones bredde og beliggenhed for tabellens typer af hovedseriestjerner.
+2. Beregn, hvor meget Solens lysstyrke skal ændre sig, før Jorden befinder sig uden for den beboelige zone.
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+| Sprektraltype | Lysstyrke [$L/L_{\odot}$] |
+|---------------+---------------------------|
+| B5            |                       800 |
+| A0            |                        60 |
+| F0            |                         8 |
+| G0            |                       1.4 |
+| K0            |                       0.4 |
+| K5            |                       0.2 |
+| M0            |                      0.06 |
+|---------------+---------------------------|
+#+reveal_html: </div>
+
+** Facit
+
+#+reveal_html: <div style="font-size: 60%;">
+
+| Spektraltype | $L/L_{\odot}$ | $r_\text{min} [AE]$ | $r_\text{max} [AE]$ | Bredde $[AE]$ |
+|--------------+---------------+---------------------+---------------------+---------------|
+| B5           |           800 |               27.15 |               30.26 |          3.11 |
+| A0           |            60 |                7.44 |                8.29 |          0.85 |
+| F0           |             8 |                2.72 |                3.03 |          0.31 |
+| G0           |           1.4 |                1.14 |                1.26 |          0.12 |
+| K0           |           0.4 |                0.61 |                0.68 |          0.07 |
+| K5           |           0.2 |                0.43 |                0.48 |          0.05 |
+| M0           |          0.06 |                0.24 |                0.26 |          0.02 |
+
+- Hvis $r_\text{min} = 1 AE$ så er $1 AE = \sqrt{k} \cdot 0.96 AE \to k = \left( \frac{1}{0.96} \right)^2 = 1.085$ . Luminositeten er steget med 8.5%
+- Hvis $r_\text{max} = 1 AE$ så er $1 AE = \sqrt{k} \cdot 1.07 AE \to k = \left( \frac{1}{1.07} \right)^2 = 0.87$ . Luminositeten er faldet med 13%
+
+** Hvor er det nemmest af finde liv?
+#+attr_reveal: :frag (appear)
+Omkring store eller små stjerner?
+
+** Liv omkring store stjerner
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+Pros: 
+#+attr_reveal: :frag (appear)
+- Brede beboelige zoner (større chance for at planeterne befinder sig indenfor zonen)
+- Stor afstand fra Stjernen (mindre farlig stråling)
+#+attr_reveal: :frag (appear)
+Cons:
+#+attr_reveal: :frag (appear)
+- Meget få store stjerner.
+- Meget korte levetider på hovedserien. (~100 000 til ~1000 000 år for de største O-stjerner)!
+- Livet kan ikke nå at udvikle sig inden stjernerne bliver til supernovaer.
+  
+** Liv omkring små stjerner
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+Pros:
+#+attr_reveal: :frag (appear)
+- Ufatteligt mange af dem (90% af alle stjerner er mindre end Solen).
+- M-stjerner har levetider, som er langt overgår Universets nuværende alder (13.7 mia år).
+#+attr_reveal: :frag (appear)
+Cons:
+#+attr_reveal: :frag (appear)
+- Kort afstand til stjernen.
+- Bunden rotation. (Ligesom Månen, samme side mod stjernen hele tiden).
+- Små stjerner er "kølige", men deres overflader er meget aktive.
+  - Der sendes store mængder af ladede partikler (Soludbrud) ud imod planeterne.
+- En verden uden dag og nat. En eventuel atmosfære slynges væk pga. solvinde, så ingen beskyttelse med den glohede plasma. 
+  
+
+* Hvad tror I nu?
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+attr_reveal: :frag (appear)
+- Drake eller Fermi?
+- Er vi blot en dum civilisation, som endnu ikke har formået at kommunikere med de andre?
+  #+attr_html: :width 200px
+  [[file:img/2020-04-29_23-34-17_technology-email-emailing-fires-smoke_signal-neanderthal-kscn1332_low.jpg]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_reveal: :frag (appear)
+- Eller er vi Mælkevejens super civilisation?
+  #+attr_html: :width 200px
+  [[file:img/Galactus.jpg]]
+#+reveal_html: </div>
+
+
+* Er Jorden almindelig men livet unikt?
+#+reveal_html: <div style="font-size: 60%;">
+Præsentation af Uffe Gråe Jørgensen, som denne præsentation er kraftigt inspireret af.
+
+#+begin_export html
+<iframe width="600" height="300" src="https://www.youtube.com/embed/_DJuPhYl-Xo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+
+Direkte link: [[http://video.ku.dk/er-jorden-almindelig-men-livet-unikt]]
+
+* Længere foredrag med Uffe Gråe Jørgensen
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_export html
+<iframe src="https://video.ku.dk/1026869.ihtml/player.html?source=share&photo%5fid=4486232" width="505" height="284" frameborder="0" border="0" scrolling="no" allowfullscreen="1" mozallowfullscreen="1" webkitallowfullscreen="1" allow="autoplay; fullscreen"></iframe>
+#+end_export
+
+Direkte link: [[https://video.ku.dk/fra-big-bang-til-liv-i-universet]]
+
+
+
+# * Noter
+# Efter Uffe Gråe Jørgensens oplæg
+# - Vores forståelse af vores solsystems dannelse
+#   - Høj densitet tæt på Solen. Gasplaneter længere ude
+#   - Isgrænsen
+# - Exoplaneter
+#   - Hot Jupiters
+# - Den beboelige zone
+#   - Flest små stjerner
+#   - Tættere på
+#   - Meget mere aktive. Store mængder varm plasma slynges ud fra stjernen og fjerner atmosfæren.
+#   - Bundet rotation. Altid samme side ind mod stjernen.
+# - Det store sene bombardement
+#   - Hvorfor er der vand på Jorden? Det kunne jo ikke "sne" i jordens afstand til solen.
+#   - Oortskyen. Hvorfor er der så mange iskometer uniform fordelt omkring solsystemet.
+#   - Jupiter og Saturn i en resonans, som har kunnet ryde planeternes baner for iskometer og fået uranus og neptun til at bytte plads.
+# - Fordelingen af jordlignende planeter og gasgiganter?
+#   - Jupiter og Saturn-systemer er sjældne. Unikt for vores solsystem. Vi har selv 4 gasplaneter, hvilket er meget sjældent.
+# 
+# - Livets bestanddele
+#   - CNO cyklus og DNA
+# 
+# * Noter fra Uffe Gråe Jørgensens foredrag på nbi.ku.dk
+# - Tæt på solen har det sneet med sten og metalpartikler, som har samlet sig til de jordlignende planeter.
+# - Længere ude har det også sneet med sten og metaller, men også med vand(is).
+#   - Vand er et af de mest hyppige molekyler i universet.
+#   - Når først vand kan kondensere ud samles "kernerne" hurtigt og gassen (brint og helium) fanges af gravitationen.
+# - Vi kan ikke se Jupiter og Saturns kerner, men deres måner består af op til 50% vand. 
+#   - Der er enorme mængder vand tilstede i de ydre dele af solsystemet.
+# 
+# - Der skal 5 jordmasser til for at danne de store gasplaneter
+#   - Dette kan ikke ske tæt på solen pga varmen.
+#   - Sker der hvor is kan samle sig til store objekter. (Jupiter og saturn)
+#     
+# - MEN, HVOR KOMMER VANDET SÅ FRA PÅ JORDEN?
+#   - Det vigtigste fra Apollo missionerne. Finde 4.5 mia år gammelt materiale på månen. Astronauterne var specielttrænet til at så gammelt materiale.
+#     - Men astronauterne vendte kun tilbage med sten 3.9 og 3.8 mia år gamle.
+#     - Alle sten har samme alder. Meget snævert tidsinterval.
+#   - Jupiter og Saturn drev ind ad for 3.9 mia år siden, hvor de passerede en "resonans", hvor Jupiter går præcis 2 gange rundt om Solen mens Saturn går én gang rundt.
+#     Dette skaber en voldsom ustabilitet i solsystemet. De 1000 mia. kometer blev smidt rundt i  tilfældig retning i vores solsystem.
+#     - De fleste hænger tilbage i Oort-skyen.
+#     - Nogen af kometerne blev sendt ind imod den indre del af solsystemet, og har ramt de indre planeter (inkl jorden og månen) og solen.
+#     - Et estimat kan findes ved at tælle antallet kratere på månens overflade. ca. 10^20 kg kosmisk materiale har ramt månen. I denne periode er faldet mindst 2000 tons per m^2 på jordens overflade (nye tal siger 2000 tons pr m^2)
+#     - Denne begivenhed kaldes *det store bombardement*.
+#       - Mængden af vand på jorden stemmer overens med antallet af nedslag på månen.
+#         
+#   - Asterioder består af sten og jern
+#   - Kometer består også (og mest) af vand.
+#   - Man tror at Murchison meteoritten er en del af en komet. Indholder 11 af de 20 animosyrer, som oplygger proteinet, som alle levende organismer består af.
+#   - 3 af livets fem bogstaver (nucliuidbaserne) er allerede tilstede på kometer.
+#   - Livets byggesten og mediet livet skal udvikles i er faldet på alle de inderste planeter i solsystemet, så også på Mars.
+#   - Vandet på Mars er desværre dampet af, fordi mars ikke er stor nok til at holde på vandet.
+#     
+#   - Mars rammes/blev ramt hele tiden af asteroider, så der bliver slået stykker af mars hele tiden. *Hvert år falder der et tons af mars på Jorden.*
+#   - Der er grund til at tro, at livet på mars har udviklet sig hurtigere end på jorden, så livet på jorden er kommet fra livet på mars.
+#     
+# - To ekstreme holdninger
+#   - Frank Drake (Drakes ligning): Har regnet sig frem til at der er /mange/ supercivilisationer i vores Mælkevej, men der er bare lidt langt imellem dem.
+#   - Enrico Fermi (Fermiparadokset): Argumenterer for, at vi er de eneste i Mælkevejen. På 5 mio år, vil vi have bosat os i hele Mælkevejen set ift vores ekspansionshastighed.
+#     - Hvorfor er de her ikke allerede? Altså super civilisation.
+#       

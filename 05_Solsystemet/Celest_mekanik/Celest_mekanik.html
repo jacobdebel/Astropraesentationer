@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<title>Celest mekanik</title>
+<meta name="author" content="Vibenhus Gymnasium"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="./img/orbits-after-kepler.gif" data-background-size="50%" data-background-position="bottom 20px center">
+<h2>Celest mekanik</h2><h3>Solsystemet - Astronomi C</h3><h4>Vibenhus Gymnasium</h4><h4></h4>
+</section>
+
+<section>
+<section id="slide-org66129ef">
+<h2 id="org66129ef">Hvordan kan himmellegemers bevægelser beskrives?</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-orge6dd16f">
+<h2 id="orge6dd16f">Aristoteles (384 f.Kr. - 322 f.Kr.)</h2>
+<blockquote>
+<p>
+Cirkelbevægelser!
+</p>
+</blockquote>
+<div class="column" style="float:left; width: 50%">
+
+<div id="org340aabe" class="figure">
+<p><img src="img/2020-11-24_07-22-25_Aristotle_Altemps_Inv8575.jpg" alt="2020-11-24_07-22-25_Aristotle_Altemps_Inv8575.jpg" width="230px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="orge1de458" class="figure">
+<p><img src="img/2020-11-24_07-25-29_Ptolemaicsystem-small.png" alt="2020-11-24_07-25-29_Ptolemaicsystem-small.png" width="300px" />
+</p>
+</div>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org8ee3ef3">
+<h2 id="org8ee3ef3">Jævn cirkelbevægelse</h2>
+
+<div id="org63f7d0d" class="figure">
+<p><img src="img/2020-12-02_13-05-48_screenshot.png" alt="2020-12-02_13-05-48_screenshot.png" width="500px" />
+</p>
+</div>
+
+
+</section>
+<section id="slide-org0a7889a">
+<h3 id="org0a7889a">Position</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Opskrevet som vektorfunktion.
+</p>
+
+<div>
+\begin{align*}
+\boxed{\vec{r}(t) = \begin{pmatrix} r \cdot \cos \left( \omega \cdot t + \phi_0\right) \\ r \cdot \sin \left( \omega \cdot t + \phi_0\right) \end{pmatrix}}
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="org6665e8a" class="figure">
+<p><img src="img/2020-12-02_13-11-32_screenshot.png" alt="2020-12-02_13-11-32_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org3662907">
+<h3 id="org3662907">Hastighed</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Hastigheden findes ved at differentiere positionen mht tiden
+</p>
+<div>
+\begin{align*}
+\vec{v}(t) &= \frac{d}{dt} \left( \vec{r} \right) \\
+\vec{v}(t) &= \begin{pmatrix}\frac{d}{dt}\left( r \cdot \cos \left( \omega \cdot t + \phi_0\right)\right) \\ \frac{d}{dt} \left(r \cdot \sin \left( \omega \cdot t + \phi_0\right)\right) \end{pmatrix} \\
+\vec{v}(t) &= \begin{pmatrix} - \omega\cdot r \cdot \sin \left( \omega \cdot t + \phi_0\right) \\ \omega \cdot r \cdot \cos \left( \omega \cdot t + \phi_0\right) \end{pmatrix} \\
+\end{align*}
+
+</div>
+
+<p>
+\[\boxed{\vec{v} (t) = \omega \cdot \hat{r}}\]
+</p>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="org8bb3993" class="figure">
+<p><img src="img/2020-12-02_13-23-00_screenshot.png" alt="2020-12-02_13-23-00_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+
+</section>
+<section>
+
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+\[\boxed{\vec{v} (t) = \omega \cdot \hat{r}}\]
+</p>
+<ul>
+<li>Hastigheden er vinkelret på radius.</li>
+<li>Hastigheden er tangentiel til bevægelsen.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="org450a320" class="figure">
+<p><img src="img/2020-12-02_13-23-00_screenshot.png" alt="2020-12-02_13-23-00_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+
+
+</section>
+<section id="slide-org00943ee">
+<h3 id="org00943ee">Acceleration</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Accelerationen findes ved at differentiere hastigheden mht tiden
+</p>
+<div>
+\begin{align*}
+\vec{a}(t) &= \frac{d}{dt} \left( \vec{v} \right) \\
+\vec{a}(t) &= \begin{pmatrix}\frac{d}{dt}\left( - \omega \cdot r \cdot \sin \left( \omega \cdot t + \phi_0\right)\right) \\ \frac{d}{dt} \left(\omega \cdot r \cdot \cos \left( \omega \cdot t + \phi_0\right)\right) \end{pmatrix} \\
+\vec{a}(t) &= \begin{pmatrix} - \omega^2\cdot r \cdot \cos \left( \omega \cdot t + \phi_0\right) \\ - \omega^2 \cdot r \cdot \sin \left( \omega \cdot t + \phi_0\right) \end{pmatrix} \\
+\end{align*}
+
+</div>
+
+<p>
+\[\boxed{\vec{a} (t) =- \omega^2 \cdot \vec{r}}\]
+</p>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org0d961f2" class="figure">
+<p><img src="img/2020-12-02_13-29-06_screenshot.png" alt="2020-12-02_13-29-06_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+
+</section>
+<section>
+
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+\[\boxed{\vec{a} (t) =- \omega^2 \cdot \vec{r}}\]
+</p>
+<ul>
+<li>Accelerationen vender <i>modsat</i> positionen.</li>
+<li>Accelerationen peger altid mod centrum.</li>
+
+</ul>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgd3f0d39" class="figure">
+<p><img src="img/2020-12-02_13-29-06_screenshot.png" alt="2020-12-02_13-29-06_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-orgd715a86">
+<h3 id="orgd715a86">Centripetalkraft</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<i>Centersøgende</i> acceleration kaldes <b>centripetalaccelerationen</b>. Det en den <font color=red>røde</font> vektor på figuren.
+</p>
+
+<p>
+<b>centripetalkraften</b> findes vha. Newtons 2. lov:
+</p>
+
+<p>
+\[\vec{F}_{res} = m \cdot \vec{a}_{cen} = - m \cdot \omega^2 \cdot \vec{r}\]
+</p>
+
+<p>
+For jævn cirkelbevægelse er:
+</p>
+<ul>
+<li>\(\vec{F}_{res} = \vec{F}_{cen}\) og</li>
+<li>\(a_{cen}= \omega^2 \cdot r = \frac{v^2}{r}\) (de sidste her er kun størrelsen på accelerationen. Retningen er ikke medtaget.)</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org12002f6" class="figure">
+<p><img src="img/2020-12-02_13-29-06_screenshot.png" alt="2020-12-02_13-29-06_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-orgb6f6643">
+<h3 id="orgb6f6643">Diverse formler til jævn cirkelbevægelse</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<div>
+\begin{align*}
+f &= \frac{1}{T} \\
+\omega &= \frac{2 \pi}{T} = 2 \pi \cdot f \\
+\phi &= \omega \cdot t (+\phi_0) \\
+v &= \omega \cdot r \\
+a_{cen} &= \omega^2 \cdot r = \frac{v^2}{r}
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<ul>
+<li>\(f\) er frekvensen (omløb pr. s.)</li>
+<li>\(T\) er omløbstiden/perioden</li>
+<li>\(\omega\) er vinkelhastigheden</li>
+<li>\(\phi\) er tilbagelagt vinkel (i rad)</li>
+<li>\(v\) er translatorisk hastighed (periferihastighed)</li>
+<li>\(a_{cen}\) er (centripetal)acceleration</li>
+
+</ul>
+</div>
+
+</section>
+<section id="slide-org970ea1c">
+<h3 id="org970ea1c">Opgaver om jævne cirkelbevægelser</h3>
+
+</section>
+<section id="slide-orga401304">
+<h3 id="orga401304">En cykel (og en bil)</h3>
+<p>
+Hvor hurtigt drejer hjulene rundt?
+</p>
+
+<video controls width="600">
+<source src="./cykel.mp4" type="video/mp4">
+</video>
+
+</section>
+<section>
+
+<p>
+Hvilke oplysninger har I brug for?
+</p>
+
+<ul>
+<li class="fragment appear">En formel med en forklaring?</li>
+<li class="fragment appear">Vinkler, grader og radianer?</li>
+<li class="fragment appear">Størrelsen på hjulene?</li>
+<li class="fragment appear">Omdrejninger pr. sekund?</li>
+
+</ul>
+
+</section>
+<section id="slide-orgbb2c5dc">
+<h3 id="orgbb2c5dc">Vindmølle</h3>
+<p>
+Hvad er vingespidsernes fart?
+</p>
+
+<video controls width="600">
+<source src="./horns_rev_2.mp4" type="video/mp4">
+</video>
+
+</section>
+<section>
+
+<p>
+Hvilke oplysninger har I brug for?
+</p>
+
+<ul>
+<li class="fragment appear">Rotationshastighed(vinkelhastighed)?</li>
+<li class="fragment appear">Vingernes størrelse?</li>
+
+</ul>
+
+</section>
+<section id="slide-org75dbfb6">
+<h3 id="org75dbfb6">Satellit i geostationær bane</h3>
+<p>
+Hvor højt ligger en geostationær satellit over Jordens overflade?
+</p>
+
+<video controls width="600">
+<source src="./geostationaer_bane.mp4" type="video/mp4">
+</video>
+
+</section>
+<section>
+
+<p>
+Hvilke oplysninger har I brug for?
+</p>
+
+<ul>
+<li class="fragment appear">Noget baggrundsviden?</li>
+<li class="fragment appear">Nogle oplysninger om Jorden?</li>
+<li class="fragment appear">Nogle oplysninger om satellitten?</li>
+
+</ul>
+
+</section>
+<section id="slide-orga212f33">
+<h3 id="orga212f33">Newtons gravitationslov</h3>
+<div style="font-size: 60%;">
+<p>
+(Kronologien passer ikke helt :) )
+</p>
+<div class="column" style="float:left; width: 70%">
+<ul>
+<li>Jorden trækker lige så meget i Månen, som Månen trækker i Jorden.</li>
+<li>Kraften de begge trækker med er</li>
+
+</ul>
+
+<p>
+\[\boxed{F_G = G \cdot \frac{M \cdot m}{r^2}\,,}\]
+</p>
+
+<ul>
+<li>hvor \(G= 6.67 \cdot 10^{-11} Nm^2/kg^2\) (kaldet Newtons gravitationskonstant),</li>
+<li>\(M\) er massen af det store objekt,</li>
+<li>\(m\) er massen af det lille,</li>
+<li>\(r\) er afstanden mellem de to objekter.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 30%">
+
+<div id="orgd3bddaa" class="figure">
+<p><img src="img/N2.png" alt="N2.png" width="600px" />
+</p>
+</div>
+
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org129d90c">
+<h2 id="org129d90c">Klaudius Ptolemæus (ca. 100 e.Kr - ca. 170 e.Kr)</h2>
+<div class="column" style="float:left; width: 40%">
+
+<div id="org26c8846" class="figure">
+<p><img src="img/2020-11-23_16-03-04_800px-PSM_V78_D326_Ptolemy.png" alt="2020-11-23_16-03-04_800px-PSM_V78_D326_Ptolemy.png" width="400px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 60%">
+<ul>
+<li class="fragment appear">Alle himmellegemebevægelser foregår vha cirkler.</li>
+<li class="fragment appear">Vilkårlige bevægelser kan beskrives vha <i>epicirkler</i>.</li>
+
+</ul>
+</div>
+
+</section>
+<section id="slide-orgaf877f1">
+<h3 id="orgaf877f1">Leg med epicirkler</h3>
+
+<div id="org6ab0687" class="figure">
+<p><img src="img/2020-11-23_16-29-46_screenshot.png" alt="2020-11-23_16-29-46_screenshot.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-org2865407">
+<h3 id="org2865407">Epicirkler kan beskrive et geocentrisk verdensbillede</h3>
+
+<div id="orgf4ab43f" class="figure">
+<p><img src="img/2020-11-23_16-50-47_Cassini_apparent.jpg" alt="2020-11-23_16-50-47_Cassini_apparent.jpg" width="500px" />
+</p>
+</div>
+
+
+</section>
+<section id="slide-org9e3de41">
+<h3 id="org9e3de41">Hvad er der så egentlig galt med dem?</h3>
+
+</section>
+<section id="slide-org9b40724">
+<h3 id="org9b40724">De kan beskrive hvad som helst!</h3>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/QVuU2YCwHjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>
+Linket er <a href="https://youtu.be/QVuU2YCwHjw">https://youtu.be/QVuU2YCwHjw</a>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgc6f3fdb">
+<h2 id="orgc6f3fdb">Johannes Kepler (1571 - 1630)</h2>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+
+<div id="org0632a29" class="figure">
+<p><img src="img/2020-11-23_17-06-17_Johannes_Kepler_1610.jpg" alt="2020-11-23_17-06-17_Johannes_Kepler_1610.jpg" width="300px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<ul>
+<li>Tycho Brahes lærling.</li>
+<li>Analyserede Tycho Brahes opmålinger (de bedste i verden for sin tid).</li>
+<li>Der må være en smartere forklaring end epicirkler.</li>
+
+</ul>
+</div>
+
+</section>
+<section id="slide-org0cef62c">
+<h3 id="org0cef62c">Keplers 1. lov</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<blockquote>
+<p>
+"Planeterne bevæger sig i ellipsebaner omkring Solen således, at Solen befinder sig i det ene brændpunkt."
+</p>
+</blockquote>
+<p>
+(Figuren viser <i>ikke</i> de forskellige planetbaner, men forskellige eksempler på ellipsebaner.)
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org95240e9" class="figure">
+<p><img src="img/2021-01-04_15-35-35_Animation_of_Orbital_eccentricity.gif" alt="2021-01-04_15-35-35_Animation_of_Orbital_eccentricity.gif" width="600px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-orgad3b451">
+<h3 id="orgad3b451">Keplers 2. lov</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<blockquote>
+<p>
+"Det af radiusvektor pr. tidsenhed overstrøgne areal er konstant"
+</p>
+</blockquote>
+<ul>
+<li class="fragment appear">En planet er lige lang tid om at bevæge sig strækningerne AB, CD og EF.</li>
+<li class="fragment appear">De tre skraverede arealer er lige store.</li>
+<li class="fragment appear">En planet bevæger sig langsomt, langt væk fra Solen, og hurtigt tæt ved Solen.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="orgdad6d49" class="figure">
+<p><img src="img/2021-01-04_15-37-26_screenshot.png" alt="2021-01-04_15-37-26_screenshot.png" width="600px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section id="slide-orgcbf5feb">
+<h3 id="orgcbf5feb">Keplers 3. lov</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<div>
+\begin{align*}
+\frac{T^2}{a^3} &= \text{konstant} \\
+\frac{T^2}{a^3} &= \frac{4 \pi^2}{G  M}
+\end{align*}
+
+</div>
+
+<p>
+Denne ligning gælder for alle himmellegemer, som kredser om et centrallegeme.
+</p>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<ul>
+<li class="fragment appear">Hvis man først har bestemt konstanten for én planet, så er det den samme konstant for alle andre planeter, som kredser om samme centrallegeme.</li>
+<li class="fragment appear"><p>
+For Jorden og vores solsystem gælder:
+</p>
+
+<p>
+\[\frac{T^2}{a^3} = \frac{(1 \text{ jordår})^2}{(1 \,AE)^3}\]
+</p></li>
+<li class="fragment appear">De samme enheder kan bruges for alle andre planeter, asteroider, kometer, etc., som kredser om Solen.</li>
+
+</ul>
+</div>
+
+</section>
+<section id="slide-org75e41c2">
+<h3 id="org75e41c2">Ellipser og ellipsebaner</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Fladtrykte cirkler. (Eller faktisk er cirklen et særtilfælde af en ellipse)</li>
+<li>Har 2 brændpunkter(fokuspunkter), \(F_1\) og \(F_2\).</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="org2986539" class="figure">
+<p><img src="img/2021-01-04_16-08-23_screenshot.png" alt="2021-01-04_16-08-23_screenshot.png" width="600px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Matematiske sammenhænge
+</p>
+<ul>
+<li>\(\left| F_1 P \right| + \left| F_2 P \right| = \text{konstant} = 2 \cdot a\)</li>
+<li>\(\left( \frac{x}{a} \right)^2 + \left( \frac{y}{b} \right)^2 =1\)</li>
+
+</ul>
+
+<p>
+Forklaringer
+</p>
+<ul>
+<li>2a = <b>storaksen</b>, eller mere almindeligt: a er den halve storakse</li>
+<li>2b = <b>lilleaksen</b>, eller mere almindeligt: b er den halve lilleakse</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org3778e2a" class="figure">
+<p><img src="img/ellipse.png" alt="ellipse.png" width="600px" />
+</p>
+</div>
+</div>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Aphel</b> og <b>perihel</b> er henholdsvis positionen med den største og mindste afstand til solen (det ene brændpunkt). Aphelafstanden benævnes \(r_a\) mens perihelafstanden benævnes \(r_p\).
+</p>
+
+<p>
+Huskeregel: Tænk på at <b>A</b> phel og <b>A</b> way hører sammen.
+</p>
+
+<p>
+<b>Excentricitet, e</b>
+</p>
+
+<ul>
+<li>Sammentrykkethed</li>
+<li>\(0\leq e < 1\) for en generel ellipse</li>
+<li>\(e = 0\) for en cirkel</li>
+
+</ul>
+
+<p>
+<b>Sammenhænge</b>
+</p>
+
+<div>
+\begin{align*}
+2a &= r_a+r_p\\
+r_a &= \left( 1 +e \right) \cdot a \\
+r_p &= \left( 1 - e \right)\cdot a \\
+e &= \frac{r_a-r_p}{r_a+r_p}
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="org55cdc25" class="figure">
+<p><img src="img/2021-01-04_16-39-53_screenshot.png" alt="2021-01-04_16-39-53_screenshot.png" width="600px" />
+</p>
+</div>
+
+<p>
+<b>Hastigheder</b>
+</p>
+
+<p>
+\[v_a\cdot r_a = v_p\cdot r_p\]
+</p>
+
+<p>
+\(v_a\) og \(v_p\) er hhv hastighederne i hhv aphel og perihel.
+</p>
+
+<p>
+(Kommer fra Keplers 2. lov og gælder <i>kun</i> i disse to punkter.)
+</p>
+</div>
+
+</section>
+<section id="slide-org2447bbe">
+<h3 id="org2447bbe">Keplers love, ellipser og Halleys komet</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 70%">
+<p>
+Oplysninger:
+</p>
+
+<ul>
+<li>Perihelafstand, \(r_p = 0.6 \,AE\)</li>
+<li>Aphelafstand, \(r_a = 35.3 \,AE\)</li>
+<li>Perihelhastigheden, \(v_p = 194 000 km/h\)</li>
+
+</ul>
+
+<p>
+Opgaver:
+</p>
+<ul>
+<li>Bestem banens excentricitet, \(e\)</li>
+<li>Bestem den halve storakse, \(a\)</li>
+<li>Beregn omløbstiden, \(T\)</li>
+<li>Beregn aphelhastigheden, \(v_a\)</li>
+
+</ul>
+
+</div>
+
+<div class="column" style="float:right; width: 30%">
+
+
+<div id="org643cde2" class="figure">
+<p><img src="img/2021-01-04_16-50-38_Lspn_comet_halley.jpg" alt="2021-01-04_16-50-38_Lspn_comet_halley.jpg" width="200px" />
+</p>
+</div>
+
+<p width="600px">
+<img src="img/2021-01-04_16-49-56_anihalley.gif" alt="2021-01-04_16-49-56_anihalley.gif" width="600px" />
+ <font color=blue> J</font>, <font color=green> S </font>, <font color=purple>H</font>
+</p>
+</div>
+
+</section>
+<section id="slide-org2083d82">
+<h4 id="org2083d82">Banens excentricitet</h4>
+<div style="font-size: 70%;">
+<div>
+\begin{align*}
+e &= \frac{r_a-r_p}{r_a+r_p}  \\
+e &= \frac{35.3 \, AE - 0.6\,AE }{35.3 \,AE + 0.6 \, AE} \\
+e &= \frac{34.7 \, AE}{35.9 \,AE } \\
+e &= 0.9666
+\end{align*}
+
+</div>
+
+<p class="fragment (appear)">
+Husk at e=0 er en cirkel, så Halleys komets bane er meget langt fra at være en cirkel.
+</p>
+
+</section>
+<section id="slide-orge9810c6">
+<h4 id="orge9810c6">Banens halve storakse, a</h4>
+<div>
+\begin{align*}
+2a &= r_a+r_p \\
+a &= \frac{r_a+r_p}{2} \\
+a &= \frac{35.3 \, AE+0.6 \, AE}{2} \\
+a &= 17.95 \,AE
+\end{align*}
+
+</div>
+
+</section>
+<section id="slide-orgb09eb15">
+<h4 id="orgb09eb15">Omløbstiden, T</h4>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Anvender Keplers 3. lov
+</p>
+
+<p>
+\[\frac{T^2}{a^3} = \frac{\left(1 \text{ jordår}\right)^2}{\left( 1 \,AE \right)^3}\]
+</p>
+
+<p>
+Kender den halve storakse i AE, så dette indsættes og \(T\) isoleres. Resultatet kommer ud i jordår.
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<div>
+\begin{align*}
+T^2 &= \frac{\left(1 \text{jordår}\right)^2\cdot a^3}{\left( 1 \,AE \right)^3} \\
+T &= \sqrt{\frac{\left(1 \text{jordår}\right)^2\cdot a^3}{\left( 1 \,AE \right)^3}} \\
+T &= \sqrt{\frac{\left(1 \text{jordår}\right)^2\cdot \left(17.95\,AE\right)^3}{\left( 1 \,AE \right)^3}} \\
+T &= 76.0 \text{ jordår}
+\end{align*}
+
+</div>
+</div>
+
+</section>
+<section id="slide-org06d6f71">
+<h4 id="org06d6f71">Aphelhastigheden, \(v_a\)</h4>
+<div style="font-size: 60%;">
+<div>
+\begin{align*}
+v_a \cdot r_a &= v_p \cdot r_p \\
+v_a  &= \frac{v_p \cdot r_p}{r_a} \\
+v_a  &= \frac{194 000 \,km/h \cdot 0.6 \,AE}{35.3 \, AE} \\
+v_a  &= 3297 \,km/h = 916 \, m/s.
+\end{align*}
+
+</div>
+
+</section>
+<section id="slide-org54403e4">
+<h3 id="org54403e4">Opgaver fra DLU</h3>
+</section>
+<section id="slide-org98c171e">
+<h3 id="org98c171e">Opgave 6.1</h3>
+
+<div id="orge6ffe39" class="figure">
+<p><img src="img/2021-01-04_21-31-38_screenshot.png" alt="2021-01-04_21-31-38_screenshot.png" width="1000px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org6a8698e">
+<h3 id="org6a8698e">Opgave 6.2</h3>
+
+<div id="org880ff3b" class="figure">
+<p><img src="img/2021-01-04_21-31-58_screenshot.png" alt="2021-01-04_21-31-58_screenshot.png" width="1000px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org1b41c08">
+<h3 id="org1b41c08">Opgave 6.3</h3>
+
+<div id="orga7216cf" class="figure">
+<p><img src="img/2021-01-04_21-32-38_screenshot.png" alt="2021-01-04_21-32-38_screenshot.png" width="1000px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org505e532">
+<h3 id="org505e532">Merkurs bane</h3>
+
+<div id="org73d0d76" class="figure">
+<p><img src="img/2021-11-28_16-05-43_screenshot.png" alt="2021-11-28_16-05-43_screenshot.png" height="550px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgc6308e0">
+<h4 id="orgc6308e0">Elongationer</h4>
+
+<div id="orgccd3dab" class="figure">
+<p><img src="./img/Elongationer.png" alt="Elongationer.png" height="400px" />
+</p>
+</div>
+
+<div style="font-size: 60%;">
+<ul>
+<li>Største elongation til venstre: Største <i>østlige</i> elongation - Når elongationen optræder <i>efter solnedgang</i>.</li>
+<li>Største elongation til højre: Største <i>vestlige</i> elongation - Når elongationen optræder <i>før solopgang</i>.</li>
+
+</ul>
+
+</section>
+<section id="slide-orgbc1837a">
+<h4 id="orgbc1837a">Moderne data</h4>
+<div style="font-size: 40%;">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Dato for største elongation</b></th>
+<th scope="col" class="org-left"><b>Vinkel mellem Solen og Merkur</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">19. jan 2017</td>
+<td class="org-left">\(24^{\circ}\) højre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">01. apr 2017</td>
+<td class="org-left">\(19^{\circ}\) venstre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">17. maj 2017</td>
+<td class="org-left">\(26^{\circ}\) højre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">30. jul 2017</td>
+<td class="org-left">\(27^{\circ}\) venstre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">12. sep 2017</td>
+<td class="org-left">\(18^{\circ}\) højre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">24. nov 2017</td>
+<td class="org-left">\(22^{\circ}\) venstre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">01. jan 2018</td>
+<td class="org-left">\(23^{\circ}\) højre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">15. mar 2018</td>
+<td class="org-left">\(18^{\circ}\) venstre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">29. apr 2018</td>
+<td class="org-left">\(27^{\circ}\) højre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">12. jul 2018</td>
+<td class="org-left">\(26^{\circ}\) venstre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">26. aug 2018</td>
+<td class="org-left">\(18^{\circ}\) højre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">06. nov 2018</td>
+<td class="org-left">\(23^{\circ}\) venstre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">15. dec 2018</td>
+<td class="org-left">\(21^{\circ}\) højre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">27. feb 2019</td>
+<td class="org-left">\(18^{\circ}\) venstre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">11. apr 2019</td>
+<td class="org-left">\(28^{\circ}\) højre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">23. jun 2019</td>
+<td class="org-left">\(25^{\circ}\) venstre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">09. aug 2019</td>
+<td class="org-left">\(19^{\circ}\) højre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">20. okt 2019</td>
+<td class="org-left">\(25^{\circ}\) venstre</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">28. nov 2019</td>
+<td class="org-left">\(20^{\circ}\) højre</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-orgbf25a73">
+<h4 id="orgbf25a73">Indtegn på figuren</h4>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+
+<div id="orgfc554de" class="figure">
+<p><img src="./img/indtegningsfigur.png" alt="indtegningsfigur.png" height="400px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<ul>
+<li>Indtegn datoen på cirklen periferi.</li>
+<li>Tegn en <i>tynd</i> streg fra Jorden til Solen.</li>
+<li>Afsæt vinklen til højre eller venstre for linjen mellem Solen og Jorden.</li>
+<li>Tegn en <b>tyk</b> linje gennem Jorden og den afsatte vinkel. Før linjen hele vejen igennem den store cirkel.</li>
+<li>Skitsér Merkurs bane.</li>
+<li>Indtegn ellipsens stor- og lilleakse. Bestem størrelserne i AE vha. skalaen.</li>
+<li>Bestem Solens afstand til ellipsens centrum.</li>
+<li>Beregn excentriciten.</li>
+<li>Sammenlign med værdierne i tabellen bagerst i DLU.</li>
+
+</ul>
+
+<p>
+Se de nærmere deltaljer i opgaven.
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgcf85498">
+<h2 id="orgcf85498">Sir Isaac Newton (1643 - 1727)</h2>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+
+
+<div id="org401859a" class="figure">
+<p><img src="img/2021-01-04_21-39-02_GodfreyKneller-IsaacNewton-1689.jpg" alt="2021-01-04_21-39-02_GodfreyKneller-IsaacNewton-1689.jpg" width="300px" />
+</p>
+</div>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<ul>
+<li>En af de største naturfilosoffer nogensinde!</li>
+<li>Forfatter til "Philosophiae Naturalis Principia Mathematica" (Principia)</li>
+
+</ul>
+<ul>
+<li class="fragment appear">Et af formålene med Principia var at eftervise Keplers love vha Newtons egen mekanik.</li>
+
+</ul>
+</div>
+
+</section>
+<section id="slide-org2b5f857">
+<h3 id="org2b5f857">Newtons love</h3>
+<div style="font-size: 60%;">
+<p>
+I kender dem fra fysik.
+</p>
+
+</section>
+<section id="slide-orgc59e9a5">
+<h4 id="orgc59e9a5">Newtons 1. lov</h4>
+<blockquote>
+<p>
+Et legeme som <i>ikke</i> påvirkes af en kraft, eller påvirkes af kræfter, som ophæver hinandens virkning, vil enten ligge stille eller bevæge sig med konstant hastighed.
+</p>
+</blockquote>
+
+</section>
+<section id="slide-org9c9a98d">
+<h4 id="org9c9a98d">Newtons 2. lov</h4>
+<p>
+Et legeme med massen, \(m\), der påvirkes af en <i>resulterende</i> kraft, \(F_{res}\), vil have en acceleration, som opfylder 
+\[F_{res} = m \cdot a\]
+</p>
+
+<p>
+Kan også skrives med vektorer.
+</p>
+
+<p>
+\[\sum_i \vec{F}_i = m \cdot \vec{a}\]
+</p>
+
+</section>
+<section id="slide-org62124d0">
+<h4 id="org62124d0">Newtons 3. lov</h4>
+<p>
+Loven om aktion og reaktion.
+</p>
+
+<blockquote>
+<p>
+Et legeme a som påvirker et andet legeme b med en kraft, vil selv blive påvirket af en lige så stor modsatrettet kraft.
+</p>
+</blockquote>
+
+</section>
+<section id="slide-orgbf94e24">
+<h3 id="orgbf94e24">Newtons gravitationslov</h3>
+<div style="font-size: 60%;">
+<p>
+Vi kan lige genbruge et slide fra tidligere :)
+</p>
+
+<div class="column" style="float:left; width: 70%">
+<ul>
+<li>Jorden trækker lige så meget i Månen, som Månen trækker i Jorden.</li>
+<li>Kraften de begge trækker med er</li>
+
+</ul>
+
+<p>
+\[\boxed{F_G = G \cdot \frac{M \cdot m}{r^2}\,,}\]
+</p>
+
+<ul>
+<li>hvor \(G= 6.67 \cdot 10^{-11} Nm^2/kg^2\) (kaldet Newtons gravitationskonstant),</li>
+<li>\(M\) er massen af det store objekt,</li>
+<li>\(m\) er massen af det lille,</li>
+<li>\(r\) er afstanden mellem de to objekter.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 30%">
+
+<div id="orgba9194f" class="figure">
+<p><img src="img/N2.png" alt="N2.png" width="600px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section id="slide-orge3856f9">
+<h4 id="orge3856f9">2 hurtige opgaver</h4>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Beregn "lille" g (den lokale tyngdeacceleration på Jorden) ved hhv ækvator og Nordpolen</b>
+</p>
+
+<p>
+Anvend opslag på wikipedia til at finde massen af Jorden og afstandene fra centrum til hhv ækvator og Nordpolen.
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>Beregn "lille" g på månen</b>
+</p>
+
+<p>
+Brug igen wikipedia til at finde relevante informationer. 
+</p>
+
+<p>
+Hvordan passer det sammen med film af hoppende astronauter på månen?
+</p>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/NHeOpJh5Q-M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgbcab514">
+<h2 id="orgbcab514">Potentiel energi</h2>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Lokalt nær Jordens (eller en planets/månes) overflade:
+</p>
+
+<p>
+\[E_{pot} = m \cdot g \cdot h\]
+</p>
+
+
+
+<div id="org4debe09" class="figure">
+<p><img src="img/Rundetaarn.png" alt="Rundetaarn.png" height="300px" />
+</p>
+</div>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+Over store afstande (astronomisk skala) mellem to objekter.
+</p>
+
+<p>
+\[E_{pot} = - G \cdot \frac{M\cdot m}{r}\]
+</p>
+
+
+
+
+<div id="org923c9b0" class="figure">
+<p><img src="img/2021-01-12_13-56-08_EarthForceField.png" alt="2021-01-12_13-56-08_EarthForceField.png" width="300px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section id="slide-orgf6bd08c">
+<h3 id="orgf6bd08c">Gravitationel potentiel energi</h3>
+<div style="font-size: 60%;">
+
+<p>
+Over store afstande (astronomisk skala) mellem to objekter.
+</p>
+
+<p>
+\[E_{pot} = - G \cdot \frac{M\cdot m}{r}\]
+</p>
+
+<ul>
+<li>Læg mærke til det negative fortegn</li>
+<li>Den potentielle energi er nul, når afstanden mellem et objekt og centrallegemet er <i>uendelig</i> stor.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga8cb552">
+<h2 id="orga8cb552">Undvigelseshastighed</h2>
+<p>
+Hvor stor en hastighed skal der til for, at et objekt kan unslippe tyngdefeltet fra et centrallegeme?
+</p>
+
+</section>
+<section id="slide-org8a04ee6">
+<h3 id="org8a04ee6">Undvigelseshastighed</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li class="fragment appear">Objektet skal opnå en potentiel energi på nul.</li>
+<li class="fragment appear">Det sker <i>uendeligt langt fra centrallegemet</i>.</li>
+<li class="fragment appear">Objektet begynder med en hastighed lig undvigelseshastigheden (\(v_e\)), og opnår en hastighed på nul uendeligt langt fra centrallegemet.</li>
+<li class="fragment appear">Objektet starter i afstanden \(r\) fra centrallegemets centrum.</li>
+<li class="fragment appear">Energien (den mekaniske energi) er bevaret under hele flyvningen.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="orgdc827c2" class="figure">
+<p><img src="img/2021-01-12_14-21-43_escvel.gif" alt="2021-01-12_14-21-43_escvel.gif" width="600px" />
+</p>
+</div>
+
+</div>
+
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Det giver os følgende ligninger
+</p>
+<p class="fragment (appear)">
+\[E_\text{mek, før} = E_\text{mek, efter}\]
+</p>
+<p class="fragment (appear)">
+\[E_\text{kin, før} + E_\text{pot, før} =E_\text{kin, efter} + E_\text{pot, efter}\]
+</p>
+<p class="fragment (appear)">
+\[\frac{1}{2}m v_e^2 - G \cdot \frac{M \cdot m}{r} = \frac{1}{2} m \cdot 0^2 - G \cdot \frac{M \cdot m}{\infty}\]
+</p>
+<p class="fragment (appear)">
+\[\frac{1}{2}m v_e^2 - G \cdot \frac{M \cdot m}{r}=0\]
+</p>
+<p class="fragment (appear)">
+\[\boxed{v_e= \sqrt{\frac{2GM}{r}}}\]
+</p>
+
+</section>
+<section id="slide-org2a7ded9">
+<h4 id="org2a7ded9">En overvejelse og en hurtig opgave</h4>
+<div style="font-size: 50%;">
+<ul>
+<li>Overvej hvorfor, 
+<ul>
+<li>NASA opsender raketter ved Cape Canaveral i Florida,</li>
+<li>russerne opsender raketter ved Baikanur i Kasakhstan,</li>
+<li>ESA opsender raketter i fransk Guyana i Sydamerika.</li>
+
+</ul></li>
+
+<li>Beregn undvigelseshastigheden fra Jorden ved hhv ækvator og ved Nordpolen.</li>
+
+</ul>
+
+
+<div id="orgf4f1716" class="figure">
+<p><img src="img/2021-01-12_14-37-31_screenshot.png" alt="2021-01-12_14-37-31_screenshot.png" width="600px" />
+</p>
+</div>
+</section>
+<section id="slide-org9d3bf79">
+<h3 id="org9d3bf79">Undvigelseshastigheder og planetatmosfærer</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Hastigheden for molekylerne i en planets atmosfære er fordelt, som på figuren.</li>
+<li>Middelværdien beregnes som \[v_m = \sqrt{\frac{T}{m}} \cdot 158 \,m/s\,,\] hvor \(T\) regnes i kelvin og \(m\) regnes i \(u\) (units).</li>
+<li>Nogle molekyler vil altid bevæge sig hurtigere end \(v_m\). Disser forsvinder og en ny ligevægt indstiller sig.</li>
+<li>En planet kan altså langsomt miste sin atmosfære.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="org0da234f" class="figure">
+<p><img src="img/2021-01-12_15-53-12_screenshot.png" alt="2021-01-12_15-53-12_screenshot.png" width="300px" />
+</p>
+</div>
+<ul>
+<li>En <i>stabil</i> atmosfære opstår, når \[ v_m < \frac{1}{6} \cdot v_e\]</li>
+
+</ul>
+</div>
+</section>
+<section id="slide-org3b707fd">
+<h3 id="org3b707fd">3 opgaver</h3>
+<div class="outline-text-3" id="text-org3b707fd">
+</div>
+</section>
+<section id="slide-org4aa847c">
+<h4 id="org4aa847c">Opgave 6.10</h4>
+
+<div id="orge1afe72" class="figure">
+<p><img src="img/2021-01-12_15-37-54_screenshot.png" alt="2021-01-12_15-37-54_screenshot.png" width="900px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org7b88abf">
+<h4 id="org7b88abf">Opgave 7.3</h4>
+
+<div id="orgf921224" class="figure">
+<p><img src="img/2021-01-12_16-00-45_screenshot.png" alt="2021-01-12_16-00-45_screenshot.png" width="900px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org1168ca9">
+<h4 id="org1168ca9">Opgave 7.4</h4>
+
+<div id="org87dd620" class="figure">
+<p><img src="img/2021-01-12_16-01-03_screenshot.png" alt="2021-01-12_16-01-03_screenshot.png" width="900px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgec5f7f4">
+<h2 id="orgec5f7f4">Hohmann-baner</h2>
+
+<div id="org9adc6fd" class="figure">
+<p><img src="img/2021-01-19_09-58-09_screenshot.png" alt="2021-01-19_09-58-09_screenshot.png" height="500px" />
+</p>
+</div>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Den mest energieffektive måde at bevæge sig fra et orbit til et andet.</li>
+<li>Tager dog også længst tid.</li>
+<li>Bevægelse langs en halv ellipsebane.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org72bf323" class="figure">
+<p><img src="img/2021-01-19_09-59-43_330px-Animation_of_InSight_trajectory.gif" alt="2021-01-19_09-59-43_330px-Animation_of_InSight_trajectory.gif" width="600px" />
+</p>
+</div>
+</div>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Fordel jer i mindre grupper og læs tema 6.1 på side 84 i Det Levende Univers.</li>
+<li>Her får I nemlig lidt detaljer til beregningerne.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org5b7798f" class="figure">
+<p><img src="img/2021-01-19_11-52-02_screenshot.png" alt="2021-01-19_11-52-02_screenshot.png" height="300px" />
+</p>
+</div>
+
+
+<div id="org9a89422" class="figure">
+<p><img src="img/2021-01-19_09-58-09_screenshot.png" alt="2021-01-19_09-58-09_screenshot.png" height="300px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section id="slide-org01567bb">
+<h3 id="org01567bb">Opgaver</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>I skal nu arbejde med opgaverne 6.7, 6.8 og 6.9.</li>
+<li>Mindst en gruppe på hver opgave.</li>
+<li>Til sidst skal hver gruppe præsentere sin opgaveløsning for resten af klassen.</li>
+
+</ul>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="orgbfdb261" class="figure">
+<p><img src="img/2021-01-19_13-04-59_screenshot.png" alt="2021-01-19_13-04-59_screenshot.png" width="600px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section>
+
+<div id="org2ad4cae" class="figure">
+<p><img src="img/2021-01-19_13-04-59_screenshot.png" alt="2021-01-19_13-04-59_screenshot.png" width="800px" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org8196d8b">
+<h2 id="org8196d8b">Lagrangepunkter</h2>
+<blockquote>
+<p>
+Hvad er et Lagrangepunkt?
+</p>
+</blockquote>
+
+</section>
+<section id="slide-org7418c21">
+<h3 id="org7418c21">Tema 6.3 s. 88 i DLU</h3>
+
+<div id="org4c23822" class="figure">
+<p><img src="img/2021-01-19_13-38-18_screenshot.png" alt="2021-01-19_13-38-18_screenshot.png" height="500px" />
+</p>
+</div>
+
+
+</section>
+<section id="slide-org380fd7a">
+<h3 id="org380fd7a">NASA har også noget</h3>
+<p>
+<a href="https://solarsystem.nasa.gov/resources/754/what-is-a-lagrange-point/">https://solarsystem.nasa.gov/resources/754/what-is-a-lagrange-point/</a>
+</p>
+
+</section>
+<section id="slide-org92900d7">
+<h3 id="org92900d7">Spørgsmål</h3>
+<p>
+I L1 ligger der for tiden 4 menneskeskabte satellitter: SOHO, WIND, ACE og DSCOVR.
+</p>
+
+<ul>
+<li class="fragment appear">Hvad er disse satellitters missioner?</li>
+<li class="fragment appear">Ud i 4 grupper og find oplysningerne om hver jeres satellit.</li>
+<li class="fragment appear">Vi mødes igen til en kort plenumpræsentation efterfølgende.</li>
+
+</ul>
+
+<p class="fragment (appear)">
+Når ja, i L2 ligger James Webb Space Telescope.
+</p>
+<ul>
+<li class="fragment appear">Hvorfor netop der?</li>
+<li class="fragment appear">Hvad er missionen for JWST?</li>
+
+</ul>
+</section>
+<section id="slide-org93f8ee3">
+<h3 id="org93f8ee3">Hvad fandt I frem til?</h3>
+<ul>
+<li class="fragment appear">SOHO</li>
+<li class="fragment appear">WIND</li>
+<li class="fragment appear">ACE</li>
+<li class="fragment appear">DSCOVR</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc712af0">
+<h3 id="orgc712af0">Hvad kan de ellers bruges til?</h3>
+<blockquote>
+<p>
+Hvad kan I forestille jer, at de forskellige Lagrangepunkter kan bruges til?
+</p>
+</blockquote>
+
+<ul>
+<li class="fragment appear">Find sammen i mindre grupper og diskutér spørgsmålet.</li>
+<li class="fragment appear">Fælles samtale efterfølgende</li>
+
+</ul>
+
+</section>
+<section id="slide-org35236c2">
+<h3 id="org35236c2">Hvilke gode idéer fik I?</h3>
+<div style="font-size: 60%;">
+
+<p>
+Fandt I på nogle nye og epokegørende måder at anvende Lagrangepunkter på?
+</p>
+
+<p class="fragment (appear)">
+Var der nogen af jer, som kom frem til:
+</p>
+<ul>
+<li class="fragment appear"><p>
+Kolonisering af Lagrangepunkter
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Lagrange_point_colonization">https://en.wikipedia.org/wiki/Lagrange_point_colonization</a>
+</p></li>
+
+<li class="fragment appear"><p>
+"Restepladser ift rumrejser"
+</p>
+
+<p>
+<a href="http://www.dept.aoe.vt.edu/~sdross/papers/AmericanScientist2006.pdf">http://www.dept.aoe.vt.edu/~sdross/papers/AmericanScientist2006.pdf</a>
+</p></li>
+
+<li class="fragment appear"><p>
+Overvågning af "rumvejret"
+</p>
+
+<p>
+<a href="https://www.technologyreview.com/2019/03/27/136297/the-space-mission-to-buy-us-vital-extra-hours-before-a-solar-storm-strikes/">https://www.technologyreview.com/2019/03/27/136297/the-space-mission-to-buy-us-vital-extra-hours-before-a-solar-storm-strikes/</a>
+</p></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/search/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: false,
+slideNumber: 'c/t',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'slide',
+transitionSpeed: 'default',
+slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true,
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>

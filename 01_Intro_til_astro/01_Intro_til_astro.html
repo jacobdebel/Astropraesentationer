@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<title>Intro til astronomi C</title>
+<meta name="author" content="Jacob Debel"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2>Intro til astronomi C</h2><h3>Vibenshus Gymnasium</h3><h4>Jacob Debel</h4><h4></h4>
+</section>
+
+<section>
+<section id="slide-orgd5c4b46" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2 id="orgd5c4b46">Mig</h2>
+<div class="outline-text-2" id="text-orgd5c4b46">
+</div>
+</section>
+<section id="slide-orgef15cb3" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgef15cb3">Matematik</h3>
+<font size=5>
+<p>
+For funktionen af to variable  
+</p>
+
+<p>
+\[f(x,y) = 2 x^3 y^2+y^3\,,\]
+</p>
+
+<p>
+er de første- og anden-afledte følgende:
+</p>
+
+<p>
+\[\frac{\partial f}{\partial x} = 6 x^2 \quad , \quad \frac{\partial f}{\partial y} = 4 x^3 y + 3 y^2\]
+</p>
+
+<p>
+og 
+</p>
+
+<p>
+\[\frac{\partial^2f }{\partial x^2} = 12 xy^2 \quad , \quad \frac{\partial^2 f}{\partial y^2} = 4 x^3 + 6 y \quad , \quad \frac{\partial^2 f}{\partial x \partial y} = 12 x^2y \quad , \quad \frac{\partial^2 f}{\partial y \partial x} = 12 x^2 y\,.\]
+</p>
+
+</font size>
+
+</section>
+<section id="slide-orgaa54bc1" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgaa54bc1">Fysik</h3>
+
+<div id="org275fe18" class="figure">
+<p><img src="img/atlas.jpg" alt="atlas.jpg" width="40%" align="left" />
+</p>
+</div>
+
+
+<div id="org7cbf4c5" class="figure">
+<p><img src="img/feynman.png" alt="feynman.png" width="40%" align="right" /> 
+</p>
+</div>
+
+</section>
+<section id="slide-org6400be4" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org6400be4">Programmering</h3>
+<div style="font-size: 60%;">
+<div class="org-src-container">
+
+<pre class="src src-python">
+<span style="color: #b6a0ff; font-weight: bold;">class</span> <span style="color: #6ae4b9; font-weight: bold;">PlayerSprite</span><span style="color: #ffffff;">(</span>arcade.Sprite<span style="color: #ffffff;">)</span>:
+    <span style="color: #b6a0ff; font-weight: bold;">def</span> <span style="color: #feacd0;">__init__</span><span style="color: #ffffff;">(</span><span style="color: #b6a0ff; font-weight: bold;">self</span>,filename=<span style="color: #00c06f;">"Resources/PNG/Planes/planeBlue1.png"</span>, scale = SPRITE_SCALE<span style="color: #ffffff;">)</span>:
+        <span style="color: #f78fe7; font-weight: bold;">super</span><span style="color: #ffffff;">()</span>.__init__<span style="color: #ffffff;">(</span>filename=filename, scale = scale<span style="color: #ffffff;">)</span>
+        <span style="color: #b6a0ff; font-weight: bold;">self</span>.append_texture<span style="color: #ffffff;">(</span>arcade.load_texture<span style="color: #ff62d4;">(</span><span style="color: #00c06f;">"Resources/PNG/Planes/planeBlue2.png"</span><span style="color: #ff62d4;">)</span><span style="color: #ffffff;">)</span>
+        <span style="color: #b6a0ff; font-weight: bold;">self</span>.append_texture<span style="color: #ffffff;">(</span>arcade.load_texture<span style="color: #ff62d4;">(</span><span style="color: #00c06f;">"Resources/PNG/Planes/planeBlue3.png"</span><span style="color: #ff62d4;">)</span><span style="color: #ffffff;">)</span>
+
+    <span style="color: #b6a0ff; font-weight: bold;">def</span> <span style="color: #feacd0;">update</span><span style="color: #ffffff;">(</span><span style="color: #b6a0ff; font-weight: bold;">self</span><span style="color: #ffffff;">)</span>:
+        <span style="color: #b6a0ff; font-weight: bold;">if</span> <span style="color: #b6a0ff; font-weight: bold;">self</span>.change_y &gt;= 0:
+            <span style="color: #b6a0ff; font-weight: bold;">self</span>.cur_texture_index = <span style="color: #ffffff;">(</span><span style="color: #b6a0ff; font-weight: bold;">self</span>.cur_texture_index + 1<span style="color: #ffffff;">)</span> % <span style="color: #f78fe7; font-weight: bold;">len</span><span style="color: #ffffff;">(</span><span style="color: #b6a0ff; font-weight: bold;">self</span>.textures<span style="color: #ffffff;">)</span>
+            <span style="color: #b6a0ff; font-weight: bold;">self</span>.set_texture<span style="color: #ffffff;">(</span><span style="color: #b6a0ff; font-weight: bold;">self</span>.cur_texture_index<span style="color: #ffffff;">)</span>
+
+        <span style="color: #b6a0ff; font-weight: bold;">self</span>.change_y -= GRAVITY
+        <span style="color: #b6a0ff; font-weight: bold;">self</span>.center_y += <span style="color: #b6a0ff; font-weight: bold;">self</span>.change_y
+</pre>
+</div>
+
+
+<div id="org2aa81c9" class="figure">
+<p><img src="img/Mig/screenshot_2019-08-10_21-42-43.png" alt="screenshot_2019-08-10_21-42-43.png" height="300px" />
+</p>
+</div>
+
+
+
+
+
+</section>
+<section id="slide-org44c3709" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org44c3709">Bor på Amager</h3>
+
+<div id="org498ace2" class="figure">
+<p><img src="img/amager.png" alt="amager.png" width="100%" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgd1434d4" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgd1434d4">Med kone og tre børn</h3>
+
+<div id="orgc7425dc" class="figure">
+<p><img src="./img/Familien.jpg" alt="Familien.jpg" width="80%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org6b4a5b7" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2 id="org6b4a5b7">Dagligdagens astronomi</h2>
+<div class="outline-text-2" id="text-org6b4a5b7">
+</div>
+</section>
+<section id="slide-org8e90ba8" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org8e90ba8">Stellarium</h3>
+
+<div id="org85eec52" class="figure">
+<p><img src="img/stellarium.jpg" alt="stellarium.jpg" width="50%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org53c385e" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org53c385e">Årstider</h3>
+
+<div id="org56e6d6f" class="figure">
+<p><img src="img/Aarstidene.jpg" alt="Aarstidene.jpg" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgad087aa" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgad087aa">Månefaser</h3>
+
+<div id="orga4900e6" class="figure">
+<p><img src="img/Phases_of_the_Moon.png" alt="Phases_of_the_Moon.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-org8999692" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org8999692">Himmelkuglens koordinater</h3>
+
+<div id="orgea37d9b" class="figure">
+<p><img src="img/Dagligdagens_astronomi/screenshot_2019-08-10_15-20-07.png" alt="screenshot_2019-08-10_15-20-07.png" width="50%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org42d0ba3" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org42d0ba3">Observationer</h3>
+
+<div id="orgd317cca" class="figure">
+<p><img src="img/observation.jpg" alt="observation.jpg" width="70%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org6617f39" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org6617f39">Regneopgaver</h3>
+
+<div id="orgc7e0ddc" class="figure">
+<p><img src="img/Dagligdagens_astronomi/screenshot_2019-08-10_15-30-42.png" alt="screenshot_2019-08-10_15-30-42.png" width="100%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgafc3b12" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2 id="orgafc3b12">Teknik og metoder</h2>
+<div class="outline-text-2" id="text-orgafc3b12">
+</div>
+</section>
+<section id="slide-orgb1a1aa6" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgb1a1aa6">Størrelsesklasser</h3>
+
+<div id="org3b6b6fd" class="figure">
+<p><img src="img/stoerrelsesklasser.png" alt="stoerrelsesklasser.png" width="40%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org49aa8b9" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org49aa8b9">Stof og stråling</h3>
+
+<div id="orga1052ce" class="figure">
+<p><img src="img/Teknik_og_metoder/screenshot_2019-08-10_15-35-44.png" alt="screenshot_2019-08-10_15-35-44.png" width="60%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org8318612" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org8318612">Spektra og spektralanalyse</h3>
+
+<div id="orgf345699" class="figure">
+<p><img src="img/Teknik_og_metoder/screenshot_2019-08-10_15-38-05.png" alt="screenshot_2019-08-10_15-38-05.png" width="70%" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgb78ddfe" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgb78ddfe">Optik og teleskoper</h3>
+
+<div id="org9f45aba" class="figure">
+<p><img src="img/keplerteleskop.png" alt="keplerteleskop.png" width="70%" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgfdef521" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgfdef521">Afstandsstigen</h3>
+<p>
+Kommer i et separat emne til sidst på året
+</p>
+
+
+<div id="org4ab948e" class="figure">
+<p><img src="img/Teknik_og_metoder/screenshot_2019-08-10_15-45-32.png" alt="screenshot_2019-08-10_15-45-32.png" width="40%" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgde3ebb8" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgde3ebb8">Eventuelt gravitationsbølger</h3>
+
+<div id="org766b935" class="figure">
+<p><img src="img/gravitational_waves.jpg" alt="gravitational_waves.jpg" width="70%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org1256db0" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2 id="org1256db0">Stjerner</h2>
+<div class="outline-text-2" id="text-org1256db0">
+</div>
+</section>
+<section id="slide-org14b7f39" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org14b7f39">Solens og stjerners opbygning</h3>
+
+<div id="orgeabe99d" class="figure">
+<p><img src="img/Stjerner/screenshot_2019-08-10_15-52-36.png" alt="screenshot_2019-08-10_15-52-36.png" width="50%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org38e561a" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org38e561a">Kernereaktioner</h3>
+<p>
+pp-proces
+</p>
+
+
+<div id="org6618261" class="figure">
+<p><img src="img/pp-proces.png" alt="pp-proces.png" width="50%" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgce1d757" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgce1d757">Stjerners udvikling</h3>
+
+<div id="orgc5a7180" class="figure">
+<p><img src="img/stellar_evolution.jpg" alt="stellar_evolution.jpg" width="70%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org8014d33" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org8014d33">HR-diagrammet</h3>
+
+<div id="orga8be029" class="figure">
+<p><img src="img/Stjerner/screenshot_2019-08-10_15-56-34.png" alt="screenshot_2019-08-10_15-56-34.png" width="70%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org15ccbee" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2 id="org15ccbee">Solsystemet</h2>
+<div class="outline-text-2" id="text-org15ccbee">
+</div>
+</section>
+<section id="slide-orge9aa06e" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orge9aa06e">Celest mekanik</h3>
+<ul>
+<li>Keplers love</li>
+<li>Baner i solsystemet</li>
+
+</ul>
+
+
+<div id="org427f4f5" class="figure">
+<p><img src="img/celestial-mechanics.jpg" alt="celestial-mechanics.jpg" />
+</p>
+</div>
+
+</section>
+<section id="slide-org5233523" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org5233523">Solsystemets opbygning</h3>
+
+<div id="orgd930b85" class="figure">
+<p><img src="img/solarsystem.jpg" alt="solarsystem.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgcddd9d4" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2 id="orgcddd9d4">Galakser</h2>
+<div class="outline-text-2" id="text-orgcddd9d4">
+</div>
+</section>
+<section id="slide-org0717b35" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org0717b35">Mælkevejen</h3>
+
+<div id="org9f32314" class="figure">
+<p><img src="img/milkyway.jpg" alt="milkyway.jpg" width="30%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org3570d9d" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org3570d9d">Galaksetyper</h3>
+
+<div id="orge97e996" class="figure">
+<p><img src="img/Galakser/screenshot_2019-08-10_16-02-29.png" alt="screenshot_2019-08-10_16-02-29.png" width="80%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org0762fda" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org0762fda">Galaksers opbygning</h3>
+
+<div id="org15eb909" class="figure">
+<p><img src="img/Galakser/screenshot_2019-08-10_16-07-11.png" alt="screenshot_2019-08-10_16-07-11.png" width="70%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org6b437bb" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2 id="org6b437bb">Universets opbygning</h2>
+<div class="outline-text-2" id="text-org6b437bb">
+</div>
+</section>
+<section id="slide-org0ab4abb" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org0ab4abb">Galaksehobe</h3>
+
+<div id="org4cd80a0" class="figure">
+<p><img src="img/Universets_opbygning/screenshot_2019-08-10_16-19-07.png" alt="screenshot_2019-08-10_16-19-07.png" width="70%" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgb25415a" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgb25415a">Universets storstruktur</h3>
+
+<div id="org13887f5" class="figure">
+<p><img src="img/Universets_opbygning/screenshot_2019-08-10_16-19-49.png" alt="screenshot_2019-08-10_16-19-49.png" width="80%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3546cff" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2 id="org3546cff">Universets udvikling</h2>
+<div class="outline-text-2" id="text-org3546cff">
+</div>
+</section>
+<section id="slide-orgc2477a5" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgc2477a5">Hubble-relationen</h3>
+
+<div id="org74aa430" class="figure">
+<p><img src="img/Universets_udvikling/screenshot_2019-08-10_16-21-30.png" alt="screenshot_2019-08-10_16-21-30.png" width="70%" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgd77f26a" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgd77f26a">Klassisk Big Bang</h3>
+<ul>
+<li>Hubble-relationen og Universets udvidelse</li>
+<li>Den kosmiske baggrundsstråling</li>
+<li>Heliumindholdet i universet</li>
+
+</ul>
+
+
+<div id="org410c1b3" class="figure">
+<p><img src="img/Klassisk_Big_Bang/screenshot_2019-08-10_16-25-29.png" alt="screenshot_2019-08-10_16-25-29.png" width="80%" />
+</p>
+</div>
+
+
+</section>
+<section id="slide-org4176e06" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org4176e06">Moderne Big Bang</h3>
+<ul>
+<li>Inflation</li>
+<li>Mørkt stof</li>
+<li>Mørk energi</li>
+
+</ul>
+
+
+
+<div id="org0d882b3" class="figure">
+<p><img src="img/Klassisk_Big_Bang/screenshot_2019-08-10_16-27-23.png" alt="screenshot_2019-08-10_16-27-23.png" width="50%" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgbf049bc" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgbf049bc">Universets fremtid</h3>
+<ul>
+<li>Skalafaktor</li>
+<li>Åbent, fladt eller krumt (lukket) univers.</li>
+<li>Big Bang</li>
+<li>Big Chill</li>
+<li>Big Chrunch</li>
+<li>Big Bounce</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgab9b5c6" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2 id="orgab9b5c6">Er der liv derude</h2>
+<div class="outline-text-2" id="text-orgab9b5c6">
+</div>
+</section>
+<section id="slide-orgbeaf329" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgbeaf329">Drake vs Fermi</h3>
+<ul>
+<li>Vi er kun én civilisation af mange.
+<ul>
+<li>Drakeligningen</li>
+
+</ul></li>
+<li>Vi er de eneste.
+<ul>
+<li>Fermiparadokset</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-orgc70539e" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orgc70539e">Solsystemets tilblivelse</h3>
+
+<div id="orgcf48776" class="figure">
+<p><img src="img/2020-04-27_09-52-38_hqdefault.jpg" alt="2020-04-27_09-52-38_hqdefault.jpg" />
+</p>
+</div>
+
+</section>
+<section id="slide-org558d14d" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org558d14d">NICE-modellen</h3>
+
+<div id="org8256ca8" class="figure">
+<p><img src="img/2020-04-29_10-12-28_1024px-Lhborbits.png" alt="2020-04-29_10-12-28_1024px-Lhborbits.png" />
+</p>
+</div>
+
+
+</section>
+<section id="slide-orga5ed50d" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orga5ed50d">Exoplaneter</h3>
+<ul>
+<li>Målemetoder</li>
+<li>Den beboelige zone</li>
+
+</ul>
+
+
+<div id="orgc0e2cd8" class="figure">
+<p><img src="img/Liv:_Opst%C3%A5en,_udvikling_og_udbredelse/screenshot_2019-08-10_16-34-36.png" alt="screenshot_2019-08-10_16-34-36.png" width="35%" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orge4f3aae" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h2 id="orge4f3aae">Eksamen?</h2>
+<div class="outline-text-2" id="text-orge4f3aae">
+</div>
+</section>
+<section id="slide-orga798886" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="orga798886">Astronomisk portfolio</h3>
+<ul>
+<li>Materialer fra mig.</li>
+<li>Materialer I selv udarbejder (skriftlige produkter, beregninger, osv).</li>
+<li>Materiale fra informationssøgning.</li>
+
+<li>Indgår i den løbende evaluering.</li>
+<li>Skal anvendes til den mundtlige eksamen.</li>
+
+</ul>
+
+</section>
+<section id="slide-org3a5184c" data-background="./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg">
+<h3 id="org3a5184c">Mundtlig prøve</h3>
+<ul>
+<li>24 min. forberedelse.</li>
+<li>24 min. eksamination.</li>
+<li>I trækker et <b>kendt</b> eksamensspørgsmål.</li>
+<li>Faglig samtale omkring emnet, ledet af eksaminator. I får dog lov til at lægge ud.</li>
+<li>Den astronomiske portfolio skal inddrages, hvor det giver mening.</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/search/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: false,
+slideNumber: 'c/t',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'slide',
+transitionSpeed: 'default',
+slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true,
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>

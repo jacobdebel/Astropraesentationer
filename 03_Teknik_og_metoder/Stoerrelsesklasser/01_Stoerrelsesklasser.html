@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<title>Størrelsesklasser</title>
+<meta name="author" content="Astronomi C"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/sky.css" id="theme"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="">
+<h2>Størrelsesklasser</h2><h3>Teknik og metoder</h3><h4>Astronomi C</h4><h4>Vibenshus Gymnasium</h4>
+</section>
+
+
+<section>
+<section id="slide-orga52a80a">
+<h2 id="orga52a80a">Hvad og hvordan kan man måle på en stjerne?</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-orgcdfbde0">
+<h2 id="orgcdfbde0">Lyset!</h2>
+<div style="font-size: 80%;">
+<ul>
+<li>Flux</li>
+<li><del>Luminositet</del> (kan ikke måles direkte, mens bruges meget)</li>
+<li>Spektralanalyse</li>
+
+</ul>
+
+</section>
+<section id="slide-org8c3f26b">
+<h3 id="org8c3f26b">Flux</h3>
+<ul>
+<li>Energi som strømmer gennem et enhedsareal pr. sekund. \(\left[ W/m^2 \right]\)</li>
+<li>Kan måles med f.eks. et pyrheliometer</li>
+
+</ul>
+
+<div id="org2d424ec" class="figure">
+<p><img src="img/51401_billede_opg2_2019-09-01_11-52-19.png" alt="51401_billede_opg2_2019-09-01_11-52-19.png" width="80%" />
+</p>
+</div>
+
+
+</section>
+<section id="slide-org49253aa">
+<h3 id="org49253aa"><del>Luminositet</del></h3>
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Den samlede effekt, som udstråles fra en stjerne. \(\left[ W \right]\).</li>
+<li>Kan ikke måles direkte fra Jorden. Kan beregnes ud fra afstanden mellem Jorden og stjernen samt fluxen.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgd37a833" class="figure">
+<p><img src="img/flux-img2_2019-09-01_11-56-21.gif" alt="flux-img2_2019-09-01_11-56-21.gif" width="100%" />
+</p>
+</div>
+</div>
+
+
+</section>
+<section id="slide-org56b4973">
+<h3 id="org56b4973">Spektralanalyse</h3>
+<ul>
+<li>Mål hver enkelt bølgelængdes relative intensitet.</li>
+
+</ul>
+
+<div class="column" style="float:left; width: 50%">
+
+<div id="org2c20137" class="figure">
+<p><img src="img/648px-Wiens_law_svg_2019-09-01_12-00-51.png" alt="648px-Wiens_law_svg_2019-09-01_12-00-51.png" width="100%" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org3c904a6" class="figure">
+<p><img src="img/Sample-stellar-spectrum_2019-09-01_12-16-12.png" alt="Sample-stellar-spectrum_2019-09-01_12-16-12.png" width="100%" />
+</p>
+</div>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgfdb44c9">
+<h2 id="orgfdb44c9">Afstanden</h2>
+<div class="outline-text-2" id="text-orgfdb44c9">
+</div>
+</section>
+<section id="slide-orga16fac4">
+<h3 id="orga16fac4">Direkte målinger af afstande</h3>
+<ul>
+<li>Radarmåling</li>
+<li>Parallakse</li>
+
+</ul>
+
+</section>
+<section id="slide-org8763911">
+<h3 id="org8763911">Radarmåling</h3>
+<ul>
+<li>Udsend radarsignal og mål tiden til signalet kommer tilbage.</li>
+<li>Dur kun til at måle afstande til Solen eller planeter i det nære solsystem.</li>
+<li>Beregning af den astronomiske enhed \[1AU = 149 597 870 km\]</li>
+
+</ul>
+
+</section>
+<section id="slide-orgce6231e">
+<h3 id="orgce6231e">Parallakse</h3>
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Virker kun for de nærmeste stjerner.</li>
+<li>Begrænset til 100 pc (<i>parsec</i>) \(1pc =3.26 ly\). \(Ø_\text{mælkevej}\approx 30 000 pc\)</li>
+<li>Se efter, om en nær stjerne flytter sig ift. de bagvedliggende "stationære" stjerner.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgadf1c98" class="figure">
+<p><img src="img/screenshot_2019-09-01_12-31-49.png" alt="screenshot_2019-09-01_12-31-49.png" width="100%" />
+</p>
+</div>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb9f5d06">
+<h2 id="orgb9f5d06">Konklusion</h2>
+<ul>
+<li class="fragment appear">Det er "nemt" at måle lyset.</li>
+<li class="fragment appear">Det svære er at måle afstande.</li>
+<li class="fragment appear">Alle afstande på den anden side af 100-1000 pc beror på astronomiske <i>modeller</i>.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgdf9425a">
+<h2 id="orgdf9425a">Størrelsesklasser</h2>
+<ul>
+<li>Visuel størrelsesklasse</li>
+<li>Absolut størrelsesklasse</li>
+
+</ul>
+
+</section>
+<section id="slide-org6087f47">
+<h3 id="org6087f47">Visuel størrelsesklasse</h3>
+<ul>
+<li class="fragment appear"><i>Sammenligning</i> af stjerner.</li>
+<li class="fragment appear"><i>Hipparchos</i> 2000 BC: 
+<ul>
+<li>1: De klareste stjerner på himlen.</li>
+<li>6: De stjerner som netop lige kan skimtes.</li>
+
+</ul></li>
+<li class="fragment appear">Jo større tal, jo mindre lys.</li>
+
+</ul>
+
+</section>
+<section id="slide-org92abf2e">
+<h3 id="org92abf2e">Visuel størrelsesklasse</h3>
+<ul>
+<li class="fragment appear">Logaritmisk skala</li>
+<li class="fragment appear">\(m = k + K\cdot \log(\phi)\)</li>
+<li class="fragment appear">\(m = -18.91 - 2.5 \cdot \log (\phi)\) hvis fluxen (\(\phi\)) måles i \(W/m^2\).</li>
+
+</ul>
+
+</section>
+<section id="slide-orgb0fd68d">
+<h3 id="orgb0fd68d">Visuel størrelsesklasse</h3>
+
+<div id="orgd46cc72" class="figure">
+<p><img src="img/screenshot_2019-09-01_12-54-24.png" alt="screenshot_2019-09-01_12-54-24.png" width="50%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org5b53af6">
+<h3 id="org5b53af6">Visuel størrelsesklasse</h3>
+<ul>
+<li>Lille lyssvag stjerne tæt på Jorden kan have samme visuelle størrelsesklasse, som en stor lysstærk stjerne længere væk fra Jorden.</li>
+
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Udstyr</th>
+<th scope="col" class="org-left">grænse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">De største teleskoper</td>
+<td class="org-left">\(30^m\)</td>
+</tr>
+
+<tr>
+<td class="org-left">Almindelig kikkert</td>
+<td class="org-left">\(9^m\)</td>
+</tr>
+
+<tr>
+<td class="org-left">Det blotte øje</td>
+<td class="org-left">\(6^m\)</td>
+</tr>
+
+<tr>
+<td class="org-left">I byen</td>
+<td class="org-left">\(3^m - 4^m\)</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-orgdcff664">
+<h3 id="orgdcff664">Absolut størrelsesklasse</h3>
+<ul>
+<li>Placér en given stjerne i en afstand på 10 pc fra iagttageren.</li>
+
+</ul>
+
+
+<div id="org982bb44" class="figure">
+<p><img src="img/screenshot_2019-09-01_13-04-39.png" alt="screenshot_2019-09-01_13-04-39.png" width="47%" />
+</p>
+</div>
+
+</section>
+<section id="slide-org487c866">
+<h3 id="org487c866">Absolut størrelsesklasse</h3>
+<p>
+Sammenhæng mellem visuel og absolut størrelsesklasse
+</p>
+
+<p>
+\[M = m - 5 \cdot \log \left( \frac{r}{10pc} \right)\]
+</p>
+
+<p>
+Afstanden skal måles i pc
+</p>
+
+</section>
+<section id="slide-orgb6d2e0e">
+<h3 id="orgb6d2e0e">Absolut størrelsesklasse</h3>
+<p>
+Sirius: \(m_s=-1.46\), \(r_s=8.8ly\)
+</p>
+
+<div>
+\begin{align*}
+M_s &= m - 5 \cdot \log \left( \frac{r_s}{10pc} \right)\\
+M_s &= -1.46 - 5 \cdot \log \left( \frac{8.8ly}{10pc\cdot 3.26 ly/pc} \right)\\
+M_s &= 1.38
+\end{align*}
+
+</div>
+
+</section>
+<section id="slide-org9731fce">
+<h3 id="org9731fce">Absolut størrelsesklasse</h3>
+<p>
+Solen: \(m_\odot=-26.8\), \(r_\odot=1 AU\)
+</p>
+
+<div>
+\begin{align*}
+M_\odot &= m_{\odot} - 5 \cdot \log \left( \frac{r_\odot}{10pc} \right)\\
+M_\odot &= -26.8 - 5 \cdot \log \left( \frac{1 AU}{10pc\cdot 20.6\cdot 10^{4} AU/pc} \right)\\
+M_\odot &= 4.8
+\end{align*}
+
+</div>
+
+</section>
+<section id="slide-org12d8daa">
+<h3 id="org12d8daa">Absolut størrelsesklasse</h3>
+<ul>
+<li>\(M_s = 1.38\)</li>
+<li>\(M_\odot = 4.8\)</li>
+
+</ul>
+<p>
+Sirius er altså en noget større og noget mere lysstærk stjerne en Solen.
+</p>
+
+</section>
+<section id="slide-org6fe8ffc">
+<h3 id="org6fe8ffc">Sammenligning af stjerner</h3>
+<div>
+\begin{align*}
+m_A - m_B &= -2.5 \cdot \log \left( \frac{\phi_A}{\phi_B} \right)\\
+M_A - M_B &= -2.5 \cdot \log \left( \frac{L_A}{L_B} \right)
+\end{align*}
+
+</div>
+
+<p>
+\(\phi\) kan udskriftes med \(L\) da \(\phi = \frac{L}{4 \pi r^2}\).
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org35adc9c">
+<h2 id="org35adc9c">Opgaver</h2>
+
+<div id="org64e62fe" class="figure">
+<p><img src="img/screenshot_2019-09-01_13-31-07.png" alt="screenshot_2019-09-01_13-31-07.png" width="70%" />
+</p>
+</div>
+
+<p>
+Side 37 i stjerner.pdf
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/search/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: false,
+slideNumber: 'c/t',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'slide',
+transitionSpeed: 'default',
+slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true,
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>

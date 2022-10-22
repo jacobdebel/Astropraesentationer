@@ -1,0 +1,374 @@
+#+title: Refraktive teleskoper
+#+author: Teknik og metoder - Astronomi C
+# Themes: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
+#+reveal_theme: sky
+#+reveal_extra_options: slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false
+#+options: toc:nil num:nil tags:nil timestamp:nil ^:{}
+
+
+* Tynde linser
+** Linsetyper
+
+#+attr_html: :width 500px
+[[file:img/screenshot_2019-09-22_19-48-18.png]]
+
+* Regler for tynde samlelinser
+  
+* Regler for tynde samlelinser
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_html: :width 600px
+[[file:img/screenshot_2019-09-22_19-54-39.png]]
+
+#+attr_reveal: :frag (appear)
+- Lysstråle parallel med /optisk akse/ går gennem /brændpunktet/.
+- Lysstråle gennem midtpunkt går ubrudt igennem.
+
+* Billeddannelse for samlelinser
+
+** Omvendt, virkeligt og forstørret billede
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-09-22 19:59:11
+#+attr_html: :width 600px
+[[file:img/screenshot_2019-09-22_19-59-11.png]]
+
+** Omvendt, virkeligt og formindsket billede
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-09-22 19:59:38
+#+attr_html: :width 600px
+[[file:img/screenshot_2019-09-22_19-59-38.png]]
+
+** Omvendt, virkeligt og uforstørret billede
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-09-22 20:00:44
+#+attr_html: :width 600px
+[[file:img/screenshot_2019-09-22_20-00-44.png]]
+
+** Opret, indbildt og forstørret billede
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-09-22 20:01:19
+#+attr_html: :width 600px
+[[file:img/screenshot_2019-09-22_20-01-19.png]]
+
+** Sådan virker en lup
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-09-22 20:02:25
+#+attr_html: :width 600px
+[[file:img/screenshot_2019-09-22_20-02-25.png]]
+
+* Formler
+
+** Linseformlen
+
+$$\frac{1}{f} = \frac{1}{b}+ \frac{1}{g}$$
+
+#+attr_reveal: :frag (appear)
+- $b$ og $g$ er /positive/ for /virkelige/ genstande og billeder.
+- $f$ er positiv for en samlelinse.
+- $f$ er negativ for en spredelinse.
+  
+** Effektive brændvidder
+
+$$\frac{1}{f} = \sum_{i=1}^N = \frac{1}{f_1} + \frac{1}{f_2} + \dots + \frac{1}{f_{N-1}} + \frac{1}{f_N}$$
+
+- Linserne skal være indenfor hinandens brændvidder.
+
+** Linsemagerens formel
+
+$$\frac{1}{f} = \left( n_l -1 \right) \left( \frac{1}{R_1} - \frac{1}{R_2} \right)$$
+
+** Linsemagerens formel
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-09-22 20:20:25
+#+attr_html: :width 300px
+[[file:img/screenshot_2019-09-22_20-20-25.png]]
+
+* Forstørrelse
+
+** Forstørrelse for en linse
+
+$$M = \frac{b}{g}$$
+
+- Hvis $M<0$ er billedet /indbildt/ og dermed /retvendt/.
+- Hvis $M>0$ er billedet /virkeligt/ og /omvendt/.
+  
+#+attr_reveal: :frag (appear)
+- Skal blandt andet bruges i opgave 3 og 4 i kompendiet om optik.
+
+** Forstørrelse for teleskoper
+
+$$M_\text{teleskop} = \frac{f_\text{objektiv}}{f_\text{okular}}$$
+
+
+#+DOWNLOADED: http://astro.physics.uiowa.edu/ITU/_Media/galileoscope_med.jpeg @ 2019-10-28 11:34:17
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+[[file:img/2019-10-28_11-34-17_galileoscope_med.jpeg]]
+
+** Forstørrelse for teleskoper
+
+$$M_\text{teleskop} = \frac{f_\text{objektiv}}{f_\text{okular}}$$
+
+
+#+DOWNLOADED: screenshot @ 2019-10-28 11:40:19
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_11-40-19_screenshot.png]]
+
+* Sammensatte linser
+
+** Én linse
+
+#+DOWNLOADED: screenshot @ 2019-10-28 11:42:58
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_11-42-58_screenshot.png]]
+
+
+** Én linse
+#+DOWNLOADED: screenshot @ 2019-10-28 11:45:41
+#+attr_html: :width 400px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_11-45-41_screenshot.png]]
+
+
+** Én linse
+
+#+DOWNLOADED: https://qph.fs.quoracdn.net/main-qimg-e27367d7ecb78690ce65078ad1f2d875 @ 2019-10-28 13:18:04
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_13-18-04_main-qimg-e27367d7ecb78690ce65078ad1f2d875.png]]
+
+** En sammensat linse
+
+#+DOWNLOADED: screenshot @ 2019-10-28 11:46:22
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_11-46-22_screenshot.png]]
+
+** Opgave 5 - sammensat linse
+
+#+DOWNLOADED: screenshot @ 2019-10-28 11:48:45
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_11-48-45_screenshot.png]]
+
+Se side 22 i kompendiet om optik.
+
+* Lysintensitet
+** Lysintensitet
+
+ Effekt pr. areal (samme enhed som flux)
+
+ $$I \equiv \frac{P}{A}$$
+
+ - Ved forstørrelse formindskes intensiteten.
+ - Forstørrelse på 2, fordobler alle længder.
+ - Arealet 4-dobles.
+ - Lysintensiteten formindskes med 4.
+   
+* Lyssamlingsevne for teleskop
+
+** Lyssamlingsevne for teleskop
+   
+
+#+DOWNLOADED: screenshot @ 2019-10-28 11:56:02
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_11-56-02_screenshot.png]]
+
+$$\text{Lyssamlingsevne} = \frac{I_\text{ud}}{I_\text{ind}} = \frac{D^2}{d^2}$$
+
+- $D$ er objektivets diameter, mens $d$ er okularets diameter.
+  
+** Lyssamlingsevne for teleskop
+$$\text{Lyssamlingsevne} = \frac{I_\text{ud}}{I_\text{ind}} = \frac{D^2}{d^2}$$
+  
+#+attr_reveal: :frag (appear)
+- Udled selv formlen fra 
+#+attr_reveal: :frag (appear)
+\begin{align*}
+P_\text{ind} &= P_\text{ud} \\
+I_\text{ind}\cdot A_\text{objektiv}&=I_\text{ud} \cdot A_\text{okular}
+\end{align*}
+
+* Opløsningsevne
+** Opløsningsevne
+   
+$$\theta = 1.22 \frac{\lambda}{D}$$
+
+- $\theta$: opløsningsevne i /radianer/
+- $\lambda$: bølgelængde af observeret lys i /meter/
+- $D$: diameter af linses /blænde/ i /meter/
+
+** Opløsningsevne
+
+$$\theta = 1.22 \frac{\lambda}{D}$$
+
+#+attr_reveal: :frag (appear)
+- Hvordan ser konstanten ud, hvis $\theta$ skal opgives i /bueminutter/ eller i /buesekunder/?
+- Regn det selv ud
+
+* Detaljestørrelse
+** Detaljestørrelse
+   
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+DOWNLOADED: screenshot @ 2019-10-28 12:11:01
+#+attr_html: :width 400px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_12-11-01_screenshot.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+\begin{eqnarray*}
+&b = \frac{2 \pi r \cdot \theta}{360^{\circ}} & &\text{ for } [\theta] = {}^{\circ}\\
+&b = ? & &\text{ for } [\theta] = \text{rad}\\
+&b = ? & &\text{ for } [\theta] = {}''
+\end{eqnarray*}
+#+reveal_html: </div>
+
+** Opgave 6
+
+#+DOWNLOADED: screenshot @ 2019-10-28 12:19:30
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_12-19-30_screenshot.png]]
+
+Se side 22 i kompendiet om optik.
+
+
+** Opgave 7
+
+#+DOWNLOADED: screenshot @ 2019-10-28 12:20:20
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_12-20-20_screenshot.png]]
+
+Se side 22 i kompendiet om optik.   
+
+** Opgave 8
+
+
+#+DOWNLOADED: screenshot @ 2019-10-28 12:20:47
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+#+attr_org: :width 100px
+[[file:img/2019-10-28_12-20-47_screenshot.png]]
+
+Se side 23 i kompendiet om optik.
+
+
+  
+
+
+* Galileoskopets forskellige opsætninger
+** Bestanddele
+   [[file:img/2019-10-28_11-34-17_galileoscope_med.jpeg]]
+
+** Plössllinsen
+   - En samlelinse bestående af to doblets.
+   - Er det primære okular i galileoskopet.
+
+#+DOWNLOADED: screenshot @ 2019-11-04 09:17:18
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+[[file:img/2019-11-04_09-17-18_screenshot.png]]
+
+** Barlowlinsen
+   - Er en spredelinse (konkav)
+   - Består ofte af sammensatte linser for at undgå kromatisk aberration.
+
+#+DOWNLOADED: screenshot @ 2019-11-04 09:19:47
+#+attr_html: :width 400px
+#+attr_latex: :width 10cm
+[[file:img/2019-11-04_09-19-47_screenshot.png]]
+
+** Barlowlinsen
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+attr_html: :width 400px
+#+attr_latex: :width 10cm
+[[file:img/2019-11-04_09-19-47_screenshot.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_reveal: :frag (appear)
+- Ud fra figuren, hvad bruges en Barlowlinse typisk til?
+- Til forstørrelse (gerne 2 eller 3 gange).
+- $M_\text{teleskop} = \frac{f_\text{objektiv}}{f_\text{okular}}$
+- Gør brændvidden for objektivet længere.
+#+reveal_html: </div>
+   
+** Se igennem galileoskopet /uden/ et okular
+   - Hvad ser I?
+** Galileoopsætning
+   - Brug Barlowlinsen som okular.
+   - Hvad ser I?
+** Galileoopsætning
+
+#+DOWNLOADED: screenshot @ 2019-11-04 09:27:43
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+[[file:img/2019-11-04_09-27-43_screenshot.png]]
+
+** Galileoopsætning
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+[[file:img/2019-11-04_09-27-56_screenshot.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_reveal: :frag (appear)
+- Okular placeret nærmere objektivet end objektivets brændvidde.
+- Parallelle stråler fortsætter parallelt.
+- Lille synsfelt, da strålerne ikke samles.
+- Øjet kan ikke se hele billedet på en gang.
+#+reveal_html: </div>
+
+** Kepleropstilling
+- Brug Plössllinsen som okular.
+- Hvad ser I?
+
+** Kepleropstilling
+
+#+DOWNLOADED: screenshot @ 2019-11-04 09:33:48
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+[[file:img/2019-11-04_09-33-48_screenshot.png]]
+
+** Kepleropstilling
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+attr_html: :width 600px
+#+attr_latex: :width 10cm
+[[file:img/2019-11-04_09-33-48_screenshot.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_reveal: :frag (appear)
+- To samlelinser, med de to brændvidder overlappende.
+- Objektivet samler og spejlvender billedet.
+- Okularet bruges som lup, til at forstørre det omvendte billede.
+#+reveal_html: </div>
+
+** Sammenligning af opsætninger
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+attr_reveal: :frag (appear)
+- Begge forstørre billedet.
+- Galileo: retvendte billeder(nemmere at navigere med).
+- Galileo: meget lille synsfelt.
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_reveal: :frag (appear)
+- Kepler: meget større synsfelt.
+- Kepler: omvendte billeder(besværliggør navigation).
+- Ude i rummet er der dog ikke noget, som hedder op og ned (venstre og højre).
+#+reveal_html: </div>
+

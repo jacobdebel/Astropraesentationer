@@ -1,0 +1,4 @@
+* Galileoskopet
+- Objektivets brændvidde er +500mm
+- Plössllinsens brændvidde er +20mm
+- Barlowlinsens brændvidde er -30mm

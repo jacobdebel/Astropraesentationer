@@ -1,0 +1,77 @@
+#+title: Vores solsystem
+#+subtitle: Præsentationer af solsystemets bestanddele
+#+author: Astronomi C
+#+date: Vibenshus Gymnasium
+#+latex_class: article
+#+latex_class_options: [a4paper, 12pt]
+#+language: da
+#+latex_header: \usepackage[danish]{babel}
+#+latex_header: \usepackage[margin=2.0cm]{geometry}
+#+latex_header: \usepackage{hyperref}
+#+latex_header: \hypersetup{colorlinks, linkcolor=black, urlcolor=blue}
+#+latex_header_extra: \setlength{\parindent}{0em}
+#+latex_header_extra: \parskip 1.5ex
+#+options: ^:{} tags:nil toc:nil num:nil timestamp:nil
+# #+toc: t # For pandoc export
+# #+numbersections: t # For pandoc export
+
+# Themes: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
+#+reveal_theme: sky
+#+reveal_title_slide: <h2>%t</h2><h3>%s</h3><h4>%a</h4><h4>%d</h4>
+#+reveal_title_slide_background:
+#+reveal_default_slide_background:
+#+reveal_extra_options: slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true
+
+
+* Introduktion
+#+reveal_html: <div style="font-size: 60%;">
+Først ser vi følgende video som en introduktion til vores solsystem.
+
+#+attr_html: :height 300px
+#+attr_latex: :width 14cm
+[[file:img/2020-02-02_16-23-47_screenshot.png]]
+
+Videoen kan findes på [[https://youtu.be/TKM0P3XlMNA?list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL][her]].
+
+Efterfølgende inddeles I af 2 eller 3 medlemmer. Hver gruppe får til ansvar, at udvikle en kort præsentation om en eller flere af solsystemets bestanddele.
+
+#+begin_export latex
+\newpage
+#+end_export
+
+* Solsystemets bestanddele
+#+reveal_html: <div style="font-size: 60%;">
+Der er følgende bestanddele i vores solsystem at vælge imellem:
+
+- Merkur
+- Venus
+- Mars
+- Asteroidebæltet
+- Jupiter
+- Saturn
+- Uranus og Neptun
+- Kuiperbæltet
+- Kometer og Oortskyen
+
+* Informationssøgning
+#+reveal_html: <div style="font-size: 60%;">
+Som en del af jeres forberedelse til jeres præsentationer skal I selv i gang med informationssøgningen, men her er lige to oplagte kilder.
+
+- Jeres astronomibog (Det levende univers) beskriver de udvalgte objekter i kapitel 7 startende på side 91.
+- I kan også se introducerende videoer på [[https://www.youtube.com/playlist?list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL][Crash Course Astronomy]] startende fra video 13 og frem. 
+
+I kan dog ikke nøjes med kun at anvende disse to kilder. I skal selv ud at finde supplerende kilder. I den forbindelse skal I vurdere deres pålidelighed.
+
+* Præsentationer
+#+reveal_html: <div style="font-size: 60%;">
+
+- Der er frit valg af præsentationsform, men varigheden skal ligge mellem 5 og 10 minutter.
+- Præsentationerne skal indeholde information fra supplerende kilder, og disse kilder skal også præsenteres.
+- Når I skal udarbejde jeres præsentationer, skal I overveje, hvilken form for præsentation I selv helst vil modtage. Præsentationen skal gerne være af en sådan kvalitet, at den engagerede elev kan tage gode noter, som kan bruges til den mundtlige eksamen, hvis vedkommende trækker et spørgsmål om vores solsystem. Når I alle sørger for dette, hjælper I hinanden til en bedre forståelse af hele solsystemet, uden selv at skulle læse om alle dets bestanddele hver for sig.
+
+#+begin_export latex
+\vfill
+\hfill God arbejdslyst.
+#+end_export
+
+

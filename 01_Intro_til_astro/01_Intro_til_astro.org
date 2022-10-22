@@ -1,0 +1,298 @@
+#+title: Intro til astronomi C
+#+subtitle: Vibenshus Gymnasium
+#+author: Jacob Debel
+#+date: 
+# Themes: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
+#+reveal_theme: black
+#+reveal_title_slide: <h2>%t</h2><h3>%s</h3><h4>%a</h4><h4>%d</h4>
+#+reveal_title_slide_background: ./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg
+#+reveal_default_slide_background: ./img/2021-01-12_12-33-41_180524-milky-way-mn-1418_d5ad12146e1dcb198ab0bea429dcd58b.jpg
+#+reveal_extra_options: slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true
+#+options: toc:nil num:nil tags:nil timestamp:nil ^:{}
+
+* Mig
+
+** Matematik
+#+html: <font size=5>
+For funktionen af to variable  
+
+$$f(x,y) = 2 x^3 y^2+y^3\,,$$
+
+er de første- og anden-afledte følgende:
+
+$$\frac{\partial f}{\partial x} = 6 x^2 \quad , \quad \frac{\partial f}{\partial y} = 4 x^3 y + 3 y^2$$
+
+og 
+
+$$\frac{\partial^2f }{\partial x^2} = 12 xy^2 \quad , \quad \frac{\partial^2 f}{\partial y^2} = 4 x^3 + 6 y \quad , \quad \frac{\partial^2 f}{\partial x \partial y} = 12 x^2y \quad , \quad \frac{\partial^2 f}{\partial y \partial x} = 12 x^2 y\,.$$
+
+#+html: </font size>
+
+** Fysik
+
+#+attr_html: :width 40% :align left
+[[file:img/atlas.jpg]]
+
+#+attr_html: :width 40% :align right
+[[file:img/feynman.png]] 
+
+** Programmering
+#+reveal_html: <div style="font-size: 60%;">   
+#+begin_src python 
+
+class PlayerSprite(arcade.Sprite):
+    def __init__(self,filename="Resources/PNG/Planes/planeBlue1.png", scale = SPRITE_SCALE):
+        super().__init__(filename=filename, scale = scale)
+        self.append_texture(arcade.load_texture("Resources/PNG/Planes/planeBlue2.png"))
+        self.append_texture(arcade.load_texture("Resources/PNG/Planes/planeBlue3.png"))
+
+    def update(self):
+        if self.change_y >= 0:
+            self.cur_texture_index = (self.cur_texture_index + 1) % len(self.textures)
+            self.set_texture(self.cur_texture_index)
+
+        self.change_y -= GRAVITY
+        self.center_y += self.change_y
+#+end_src 
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 21:42:43
+#+attr_html: :height 300px
+[[file:img/Mig/screenshot_2019-08-10_21-42-43.png]]
+
+
+
+
+
+** Bor på Amager
+   
+#+attr_html: :width 100%
+[[file:img/amager.png]]
+
+** Med kone og tre børn
+   
+#+attr_html: :width 80%
+[[./img/Familien.jpg]]
+
+* Dagligdagens astronomi
+
+** Stellarium
+
+#+attr_html: :width 50%
+[[file:img/stellarium.jpg]]
+
+** Årstider
+   
+[[file:img/Aarstidene.jpg]]
+
+** Månefaser
+
+[[file:img/Phases_of_the_Moon.png]]
+
+** Himmelkuglens koordinater
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 15:20:07
+#+attr_html: :width 50%
+[[file:img/Dagligdagens_astronomi/screenshot_2019-08-10_15-20-07.png]]
+
+** Observationer
+
+#+attr_html: :width 70%
+[[file:img/observation.jpg]]
+
+** Regneopgaver
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 15:30:42
+#+attr_html: :width 100%
+[[file:img/Dagligdagens_astronomi/screenshot_2019-08-10_15-30-42.png]]
+
+* Teknik og metoder
+
+** Størrelsesklasser
+
+#+attr_html: :width 40%
+[[file:img/stoerrelsesklasser.png]]
+
+** Stof og stråling
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 15:35:44
+#+attr_html: :width 60%
+[[file:img/Teknik_og_metoder/screenshot_2019-08-10_15-35-44.png]]
+
+** Spektra og spektralanalyse
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 15:38:05
+#+attr_html: :width 70%
+[[file:img/Teknik_og_metoder/screenshot_2019-08-10_15-38-05.png]]
+
+** Optik og teleskoper
+
+#+attr_html: :width 70%
+[[file:img/keplerteleskop.png]]
+
+** Afstandsstigen
+Kommer i et separat emne til sidst på året
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 15:45:32
+#+attr_html: :width 40%
+[[file:img/Teknik_og_metoder/screenshot_2019-08-10_15-45-32.png]]
+
+** Eventuelt gravitationsbølger
+   
+#+attr_html: :width 70%
+[[file:img/gravitational_waves.jpg]]
+
+* Stjerner
+
+** Solens og stjerners opbygning
+   
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 15:52:36
+#+attr_html: :width 50%
+[[file:img/Stjerner/screenshot_2019-08-10_15-52-36.png]]
+
+** Kernereaktioner
+pp-proces
+
+#+attr_html: :width 50%
+[[file:img/pp-proces.png]]
+
+** Stjerners udvikling
+   
+#+attr_html: :width 70%
+[[file:img/stellar_evolution.jpg]]
+
+** HR-diagrammet
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 15:56:34
+#+attr_html: :width 70%
+[[file:img/Stjerner/screenshot_2019-08-10_15-56-34.png]]
+
+* Solsystemet
+
+** Celest mekanik
+   
+- Keplers love
+- Baner i solsystemet
+
+[[file:img/celestial-mechanics.jpg]]
+
+** Solsystemets opbygning
+
+[[file:img/solarsystem.jpg]]
+
+* Galakser
+
+** Mælkevejen
+
+#+attr_html: :width 30%
+[[file:img/milkyway.jpg]]
+
+** Galaksetyper
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 16:02:29
+#+attr_html: :width 80%
+[[file:img/Galakser/screenshot_2019-08-10_16-02-29.png]]
+
+** Galaksers opbygning
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 16:07:11
+#+attr_html: :width 70%
+[[file:img/Galakser/screenshot_2019-08-10_16-07-11.png]]
+
+* Universets opbygning
+
+** Galaksehobe
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 16:19:07
+#+attr_html: :width 70%
+[[file:img/Universets_opbygning/screenshot_2019-08-10_16-19-07.png]]
+
+** Universets storstruktur
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 16:19:49
+#+attr_html: :width 80% 
+[[file:img/Universets_opbygning/screenshot_2019-08-10_16-19-49.png]]
+
+* Universets udvikling
+
+** Hubble-relationen
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 16:21:30
+#+attr_html: :width 70%
+[[file:img/Universets_udvikling/screenshot_2019-08-10_16-21-30.png]]
+
+** Klassisk Big Bang
+  
+- Hubble-relationen og Universets udvidelse
+- Den kosmiske baggrundsstråling
+- Heliumindholdet i universet
+  
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 16:25:29
+#+attr_html: :width 80%
+[[file:img/Klassisk_Big_Bang/screenshot_2019-08-10_16-25-29.png]]
+
+
+** Moderne Big Bang
+   
+- Inflation
+- Mørkt stof
+- Mørk energi
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 16:27:23
+#+attr_html: :width 50%
+[[file:img/Klassisk_Big_Bang/screenshot_2019-08-10_16-27-23.png]]
+
+** Universets fremtid
+
+- Skalafaktor
+- Åbent, fladt eller krumt (lukket) univers.
+- Big Bang
+- Big Chill
+- Big Chrunch
+- Big Bounce
+  
+* Er der liv derude
+
+** Drake vs Fermi
+- Vi er kun én civilisation af mange.
+  - Drakeligningen
+- Vi er de eneste.
+  - Fermiparadokset
+    
+** Solsystemets tilblivelse
+
+[[file:img/2020-04-27_09-52-38_hqdefault.jpg]]
+
+** NICE-modellen
+
+[[file:img/2020-04-29_10-12-28_1024px-Lhborbits.png]]
+
+
+** Exoplaneter
+
+- Målemetoder
+- Den beboelige zone
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-10 16:34:36
+#+attr_html: :width 35%
+[[file:img/Liv:_Opst%C3%A5en,_udvikling_og_udbredelse/screenshot_2019-08-10_16-34-36.png]]
+
+
+* Eksamen?
+
+** Astronomisk portfolio
+
+- Materialer fra mig.
+- Materialer I selv udarbejder (skriftlige produkter, beregninger, osv).
+- Materiale fra informationssøgning.
+
+- Indgår i den løbende evaluering.
+- Skal anvendes til den mundtlige eksamen.
+
+** Mundtlig prøve
+
+- 24 min. forberedelse.
+- 24 min. eksamination.
+- I trækker et *kendt* eksamensspørgsmål. 
+- Faglig samtale omkring emnet, ledet af eksaminator. I får dog lov til at lægge ud.
+- Den astronomiske portfolio skal inddrages, hvor det giver mening.
